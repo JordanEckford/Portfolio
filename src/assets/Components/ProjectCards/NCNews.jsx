@@ -28,13 +28,15 @@ export const NCNews = () => {
    <div className="mt-5 mb-5 border-b-2 border-orange-600"></div>
    <h4 className="underline text-sm">Check it out</h4>
    <p className="text-sm hover:text-orange-600">
-    <a href="https://jordanncnews.netlify.app/home">Live App</a>
+    <a href="https://jordanncnews.netlify.app/home" target="_blank">
+     Live App
+    </a>
    </p>
    <p className="text-sm hover:text-orange-600">
-    <a href="https://github.com/JordanEckford/nc-news-app"></a>GitHub <span className="text-xs">(Front-end)</span>
+    <a href="https://github.com/JordanEckford/nc-news-app" target="_blank"></a>GitHub <span className="text-xs">(Front-end)</span>
    </p>
    <p className="text-sm hover:text-orange-600">
-    <a href="https://github.com/JordanEckford/nc-news"></a>GitHub <span className="text-xs">(Back-end)</span>
+    <a href="https://github.com/JordanEckford/nc-news" target="_blank"></a>GitHub <span className="text-xs">(Back-end)</span>
    </p>
    <div className="mt-5 mb-5 border-b-2 border-orange-600"></div>
   </div>
