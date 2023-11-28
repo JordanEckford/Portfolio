@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { version } from "../../../version";
 
 export const SideBar = () => {
  const [isOpen, setIsOpen] = useState(false);
  const [colour, setColour] = useState(true);
  const [swap, setSwap] = useState(true);
+ const [clickCount, setClickCount] = useState(0);
  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
 
  return (
@@ -42,7 +44,7 @@ export const SideBar = () => {
      </Link>
     </nav>
     <div
-     className="mt-80"
+     className="mt-60"
      onClick={() => {
       if (colour && swap) {
        setColour(!colour);
@@ -56,6 +58,8 @@ export const SideBar = () => {
       if (colour && !swap) {
        setSwap(!swap);
       }
+      let click = clickCount + 1;
+      setClickCount(click);
      }}
     >
      <h1
@@ -72,6 +76,7 @@ export const SideBar = () => {
      >
       Eckford
      </h1>
+     {clickCount >= 10 ? <div className="m-auto mt-10 text-center">build: {version}</div> : null}
     </div>
    </div>
   </div>
