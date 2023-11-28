@@ -14,12 +14,12 @@ export const SingleProject = () => {
   <div className="m-auto w-[80%] text-center">
    <Link
     to="/projects"
-    className="text-xs text-left fixed top-7 left-4 text-white p-1 hover:text-black bg-orange-600 border-2 border-black rounded-md xl:text-xl xl:top-4"
+    className="text-xs -z-0 text-left fixed top-7 left-4 text-white p-1 hover:text-black bg-orange-600 border-2 border-black rounded-md xl:text-xl xl:top-4"
    >
     Back
    </Link>
-   <h3 className="underline text-center mt-5 text-2xl xl:text-4xl">{currentProject.name}</h3>
-   <div className="xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:mt-20">
+   <h3 className="-mt-14 text-white sm:hidden text-center text-2xl xl:text-4xl">{currentProject.name}</h3>
+   <div className="xl:grid mt-10 xl:grid-cols-2 xl:grid-rows-2 xl:mt-20">
     <img src={currentProject.image} alt="" className="w-[80vw] sm:w-[500px] m-auto border-2 border-black rounded-lg xl:row-span-1 xl:mt-0 shadow-xl" />
     <div className="mt-5 mb-5 border-b-2 border-orange-600 xl:hidden"></div>
     <ul className="text-xs mb-5 xl:m-auto">

@@ -1,8 +1,8 @@
 export const Skills = () => {
  return (
   <div className="m-auto w-[80%]">
-   <h2 className="mt-0 text-center text-3xl underline sm:mt-10">Skills</h2>
-   <div className="m-auto mt-5 grid grid-cols-2 xl:grid-cols-4 justify-items-stretch gap-y-2 gap-x-2 w-80 xl:w-[1000px] xl:justify-items-center">
+   <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Skills</h2>
+   <div className="m-auto mt-10 grid grid-cols-2 xl:grid-cols-4 justify-items-stretch gap-y-2 gap-x-2 w-80 xl:w-[1000px] xl:justify-items-center">
     <img className="h-10 xl:h-20 xl:w-[700px]" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="" />
     <img className="h-10 xl:h-20 xl:w-80 object-cover" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="" />
     <img className="h-10 xl:h-20 xl:w-80" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="" />

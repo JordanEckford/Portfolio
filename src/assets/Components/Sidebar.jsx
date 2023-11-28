@@ -22,7 +22,7 @@ export const SideBar = () => {
 
    {!isOpen ? <div className="bg-orange-500 h-20 border-b-2 border-black z-30"></div> : <div className="bg-orange-500 h-20 border-b-2 border-orange-600"></div>}
    <div
-    className={`top-0 left-0 fixed bg-orange-400 border-2 border-black w-[100vw] h-[100vh] p-10 ${
+    className={`top-0 z-30 left-0 fixed bg-orange-400 border-2 border-black w-[100vw] h-[100vh] p-10 ${
      isOpen ? "translate-x-100" : "translate-x-full"
     } ease-in-out duration-300`}
    >
@@ -67,14 +67,14 @@ export const SideBar = () => {
        swap ? "translate-y-6" : null
       }`}
      >
-      Jordan
+      Eckford
      </h1>
      <h1
       className={` w-[100%] text-center text-1xl sm:text-3xl ease-in-out duration-200 ${colour ? "text-white" : "text-black"} ${
        swap ? "-translate-y-6" : null
       }`}
      >
-      Eckford
+      Jordan
      </h1>
      {clickCount >= 10 ? <div className="m-auto mt-10 text-center">build: {version}</div> : null}
     </div>
