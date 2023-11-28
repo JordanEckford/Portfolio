@@ -6,12 +6,14 @@ export const Contact = () => {
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [message, setMessage] = useState("");
+ const [sendLoading, setSendLoading] = useState(false);
  const [isError, setIsError] = useState(false);
  const [isSuccess, setIsSuccess] = useState(false);
  const [completedForm, setCompletedForm] = useState({});
 
  const sendEmail = (e) => {
   e.preventDefault();
+  setSendLoading(true);
 
   emailjs.sendForm("service_os12iyo", "contact_form", form.current, "M3g5--3qVERLq6TLG").then(
    (result) => {
@@ -22,6 +24,7 @@ export const Contact = () => {
     setName("");
    },
    (error) => {
+    setSendLoading(false);
     setIsError(true);
    }
   );
@@ -82,7 +85,12 @@ export const Contact = () => {
      }}
      className="border-2 border-orange-600 rounded-md resize-none min-h-[400px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
     />
-    <input className="m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4" type="submit" value="Send" />
+    <input
+     className={`m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 ${sendLoading ? "bg-slate-600" : null}`}
+     type="submit"
+     value="Send"
+     disabled={sendLoading ? true : false}
+    />
     {isSuccess ? <p className="text-green-600 text-xl text-center font-med">Message Sent!</p> : null}
     {isError ? <p className="text-red-500 text-xl text-center font-med">Something went wrong, please try again later!</p> : null}
    </form>
