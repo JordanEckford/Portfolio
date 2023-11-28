@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
  return (
-  <div className="m-auto text-center mt-20 w-[80%]">
+  <div className="animate-fade m-auto text-center mt-20 w-[80%]">
    <p className="mt-10 text-xl sm:text-2xl">Hello, I'm</p>
    <h1 className="text-left text-7xl sm:text-8xl text-black mt-5 sm:text-center sm:mr-40 hover:scale-110 duration-1000 animate-slidedownright">Jordan</h1>
    <h1 className="text-right text-7xl sm:text-8xl text-orange-600 mb-5 sm:text-center sm:ml-40 hover:scale-110 duration-1000 animate-slideupleft"> Eckford</h1>

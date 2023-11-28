@@ -5,8 +5,8 @@ export const About = () => {
   <>
    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">About Me</h2>
    <div className="m-auto mt-10 text-center w-[90%] xl:w-[1200px] xl:grid xl:grid-cols-2 xl:grid-rows-1 xl:max-h-[700px]">
-    <img className="m-auto mt-5 rounded-full w-[80vw] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3" src="jordan.jpg" />
-    <p className="m-auto mt-10">
+    <img className="animate-slideup m-auto mt-5 rounded-full w-[80vw] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3" src="jordan.jpg" />
+    <p className="animate-slideup m-auto mt-10">
      My name is {"  "}
      <span className="text-xl">
       Jordan <span className="text-orange-600">Eckford</span>
@@ -17,23 +17,26 @@ export const About = () => {
      </a>
      , graduating from the course in November 2023.
     </p>
-    <p>
+
+    <p className="animate-slideup">
      I have a BSc in Geology and a background in Engineering Geology where my career over the last 6 years has been. I have always had an interest in coding,
      but have never had the chance to fully explore and develop my skills. After completing courses on{" "}
      <a href="https://www.freecodecamp.org/" className="text-xl text-slate-600">
       FreeCodeCamp
      </a>{" "}
      i decided it was time to persue this full time.
-     <p />
-     <br />
-     <p className="xl:col-start-2 row-start-3 row-span-1">
-      I welcome all suggestions, criticisms, or positive feedback on any of my projects. Even if you would just like to know more about any projects, get in
-      touch with me below!
-     </p>
     </p>
+
+    <br />
+
+    <p className="animate-slideup xl:col-start-2 row-start-3 row-span-1">
+     I welcome all suggestions, criticisms, or positive feedback on any of my projects. Even if you would just like to know more about any projects, get in
+     touch with me below!
+    </p>
+
     <div>
      <Link to="/contact">
-      <button className="mt-5 mb-5 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
+      <button className="animate-slideup mt-5 mb-5 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
      </Link>
     </div>
    </div>

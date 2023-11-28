@@ -70,7 +70,7 @@ export const Contact = () => {
      onChange={(event) => {
       setName(event.target.value);
      }}
-     className="border-2 border-orange-600 rounded-md text-center row-start-2 xl:col-span-2"
+     className="border-2 border-orange-600 rounded-md text-center row-start-2 xl:col-span-2 "
     />
     <label className="mt-5 xl:row-start-1 xl:col-span-2 xl:mt-8">Email</label>
     <input
