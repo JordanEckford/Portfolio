@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 export const SideBar = () => {
  const [isOpen, setIsOpen] = useState(false);
+ const [colour, setColour] = useState(true);
+ const [swap, setSwap] = useState(true);
  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
 
  return (
@@ -32,13 +34,45 @@ export const SideBar = () => {
      <Link to="/projects" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
       Projects
      </Link>
+     <Link to="/about" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
+      About
+     </Link>
      <Link to="/contact" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
       Contact
      </Link>
     </nav>
-    <h1 className="mt-80 w-[100%] text-center text-1xl sm:text-3xl text-black">
-     Jordan<span className="text-white"> Eckford</span>
-    </h1>
+    <div
+     className="mt-80"
+     onClick={() => {
+      if (colour && swap) {
+       setColour(!colour);
+      }
+      if (!colour && swap) {
+       setSwap(!swap);
+      }
+      if (!colour && !swap) {
+       setColour(!colour);
+      }
+      if (colour && !swap) {
+       setSwap(!swap);
+      }
+     }}
+    >
+     <h1
+      className={` w-[100%] text-center text-1xl sm:text-3xl ease-in-out duration-200  ${colour ? "text-black" : "text-white"} ${
+       swap ? "translate-y-6" : null
+      }`}
+     >
+      Jordan
+     </h1>
+     <h1
+      className={` w-[100%] text-center text-1xl sm:text-3xl ease-in-out duration-200 ${colour ? "text-white" : "text-black"} ${
+       swap ? "-translate-y-6" : null
+      }`}
+     >
+      Eckford
+     </h1>
+    </div>
    </div>
   </div>
  );

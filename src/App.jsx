@@ -8,6 +8,7 @@ import { Contact } from "./assets/Components/Contact";
 import { Home } from "./assets/Components/Home";
 import { SideBar } from "./assets/Components/Sidebar";
 import { SingleProject } from "./assets/Components/ProjectCards/SingleProject";
+import { About } from "./assets/Components/About";
 
 function App() {
  return (
@@ -19,6 +20,7 @@ function App() {
     <Route path="/" element={<Home />} />
     <Route path="/skills" element={<Skills />} />
     <Route path="/projects" element={<Projects />} />
+    <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/projects/:project_name" element={<SingleProject />} />
    </Routes>

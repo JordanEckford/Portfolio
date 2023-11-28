@@ -44,9 +44,13 @@ export const Contact = () => {
 
  return (
   <>
-   <h2 className="mt-0 text-center text-3xl underline">Contact Form</h2>
-   <form ref={form} onSubmit={sendEmail} className="m-auto mt-10 w-[80%] flex flex-col">
-    <label>Name</label>
+   <h2 className="mt-0 text-center text-3xl underline sm:mt-10">Contact Form</h2>
+   <form
+    ref={form}
+    onSubmit={sendEmail}
+    className="m-auto mt-10 w-[80%] flex flex-col xl:w-[60%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
+   >
+    <label className="xl:row-start-1 xl:col-span-2 xl:mt-8">Name</label>
     <input
      required
      type="text"
@@ -55,9 +59,9 @@ export const Contact = () => {
      onChange={(event) => {
       setName(event.target.value);
      }}
-     className="border-2 border-orange-600 rounded-md"
+     className="border-2 border-orange-600 rounded-md text-center row-start-2 xl:col-span-2"
     />
-    <label className="mt-5">Email</label>
+    <label className="mt-5 xl:row-start-1 xl:col-span-2 xl:mt-8">Email</label>
     <input
      required
      type="email"
@@ -66,9 +70,9 @@ export const Contact = () => {
      onChange={(event) => {
       setEmail(event.target.value);
      }}
-     className="border-2 border-orange-600 rounded-md"
+     className="border-2 border-orange-600 rounded-md text-center row-start-2 xl:col-span-2"
     />
-    <label className="mt-5">Message</label>
+    <label className="mt-5 xl:row-start-3 xl:col-span-4 xl:mt-8">Message</label>
     <textarea
      required
      name="message"
@@ -76,9 +80,9 @@ export const Contact = () => {
      onChange={(event) => {
       setMessage(event.target.value);
      }}
-     className="border-2 border-orange-600 rounded-md resize-none min-h-[400px]"
+     className="border-2 border-orange-600 rounded-md resize-none min-h-[400px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
     />
-    <input className="m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white" type="submit" value="Send" />
+    <input className="m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4" type="submit" value="Send" />
     {isSuccess ? <p className="text-green-600 text-xl text-center font-med">Message Sent!</p> : null}
     {isError ? <p className="text-red-500 text-xl text-center font-med">Something went wrong, please try again later!</p> : null}
    </form>

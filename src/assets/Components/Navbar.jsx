@@ -13,6 +13,9 @@ export const Navbar = () => {
     <Link to="/projects" className="text-2xl text-black m-auto mt-0 mb-0 hover:text-white hover:underline">
      Projects
     </Link>
+    <Link to="/about" className="text-2xl text-black m-auto mt-0 mb-0 hover:text-white hover:underline">
+     About
+    </Link>
     <Link to="/contact" className="text-2xl text-black m-auto mt-0 mb-0 hover:text-white hover:underline">
      Contact
     </Link>
