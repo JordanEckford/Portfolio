@@ -4,7 +4,7 @@ export const About = () => {
  return (
   <>
    <h2 className="mt-0 text-center text-3xl underline sm:mt-10">About Me</h2>
-   <div className="m-auto text-center w-[90%] xl:w-[80%] xl:max-w-{1200px] xl:grid xl:grid-cols-2 xl:grid-rows-1 xl:max-h-[700px]">
+   <div className="m-auto text-center w-[90%] xl:w-[1200px] xl:grid xl:grid-cols-2 xl:grid-rows-1 xl:max-h-[700px]">
     <img className="m-auto mt-5 rounded-full w-[80vw] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3" src="jordan.jpg" />
     <p className="m-auto mt-10">
      My name is {"  "}
