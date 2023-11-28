@@ -6,6 +6,7 @@ export const Contact = () => {
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
  const [message, setMessage] = useState("");
+ const [uniqueID, setUniqueID] = useState((Math.random() * 100000) | 0);
  const [sendLoading, setSendLoading] = useState(false);
  const [isError, setIsError] = useState(false);
  const [isSuccess, setIsSuccess] = useState(false);
@@ -18,7 +19,7 @@ export const Contact = () => {
   emailjs.sendForm("service_os12iyo", "contact_form", form.current, "M3g5--3qVERLq6TLG").then(
    (result) => {
     setIsSuccess(true);
-    setCompletedForm({ name, email, message });
+    setCompletedForm({ name, email, message, uniqueID });
     setEmail("");
     setMessage("");
     setName("");
@@ -32,9 +33,11 @@ export const Contact = () => {
 
  if (isSuccess) {
   return (
-   <div className="flex flex-col m-auto mt-5 text-center">
+   <div className="flex flex-col m-auto mt-5 text-center xl:w-[70%]">
     <p className="text-green-600 text-xl text-center font-med">Message Sent!</p>
     <div className="mt-5 m-auto p-5 border-2 border-black w-[80%] rounded-md">
+     <p className="text-slate-400">Unique ID: {completedForm.uniqueID}</p>
+     <div className="m-auto w-[80%] mt-5 mb-5 border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
      <p>{completedForm.name}</p>
      <div className="m-auto w-[80%] mt-5 mb-5 border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
      <p>{completedForm.email}</p>
@@ -53,6 +56,8 @@ export const Contact = () => {
     onSubmit={sendEmail}
     className="m-auto mt-10 w-[80%] flex flex-col xl:w-[60%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
    >
+    <label className="hidden">unique_id</label>
+    <input type="text" name="unique_id" value={uniqueID} readOnly className="hidden" />
     <label className="xl:row-start-1 xl:col-span-2 xl:mt-8">Name</label>
     <input
      required
