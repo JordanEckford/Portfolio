@@ -33,8 +33,8 @@ export const Contact = () => {
 
  if (isSuccess) {
   return (
-   <>
-    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
+   <div className="mt-28">
+    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 fixed top-20 left-[95px] z-50">Contact Form</h2>
     <div className="flex flex-col m-auto mt-5 text-center xl:w-[70%]">
      <p className="text-green-600 text-xl text-center font-med">Message Sent!</p>
      <div className="mt-5 m-auto p-5 border-2 border-black w-[80%] rounded-md">
@@ -47,17 +47,20 @@ export const Contact = () => {
       <p>{completedForm.message}</p>
      </div>
     </div>
-   </>
+   </div>
   );
  }
 
  return (
-  <>
-   <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
+  <div className="mt-28">
+   <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 fixed top-20 left-[95px] z-50">Contact Form</h2>
+   <p className="m-auto mt-10 text-center text-xl">
+    Any questions, suggestions, or just fancy telling me something? <br /> Let me know in the form below!
+   </p>
    <form
     ref={form}
     onSubmit={sendEmail}
-    className="m-auto mt-10 w-[80%] flex flex-col xl:w-[60%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
+    className="animate-fade m-auto mt-10 w-[80%] flex flex-col xl:w-[60%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
    >
     <label className="hidden">unique_id</label>
     <input type="text" name="unique_id" value={uniqueID} readOnly className="hidden" />
@@ -91,7 +94,7 @@ export const Contact = () => {
      onChange={(event) => {
       setMessage(event.target.value);
      }}
-     className="border-2 border-orange-600 rounded-md resize-none min-h-[400px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
+     className="border-2 border-orange-600 rounded-md resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
     />
     <input
      className={`m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 ${sendLoading ? "bg-slate-600" : null}`}
@@ -111,6 +114,6 @@ export const Contact = () => {
     ) : null}
     {isError ? <p className="text-red-500 text-xl text-center font-med">Something went wrong, please try again later!</p> : null}
    </form>
-  </>
+  </div>
  );
 };

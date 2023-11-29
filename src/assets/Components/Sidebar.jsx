@@ -20,7 +20,11 @@ export const SideBar = () => {
     <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-3 opacity-100" : "opacity-100"}`} />
    </button>
 
-   {!isOpen ? <div className="bg-orange-500 h-20 border-b-2 border-black z-30"></div> : <div className="bg-orange-500 h-20 border-b-2 border-orange-600"></div>}
+   {!isOpen ? (
+    <div className="bg-orange-500 h-20 w-[100%] border-b-2 border-black -z-0 fixed"></div>
+   ) : (
+    <div className="bg-orange-500 h-20 w-[100%] border-b-2 border-orange-600 -z-0 fixed"></div>
+   )}
    <div
     className={`top-0 z-30 left-0 fixed bg-orange-400 border-2 border-black w-[100vw] h-[100vh] p-10 ${
      isOpen ? "translate-x-100" : "translate-x-full"

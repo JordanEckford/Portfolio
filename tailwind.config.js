@@ -2,14 +2,21 @@
 export default {
  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
  theme: {
+  fontFamily: {
+   fancy: ["Roboto", "Caveat", "Indie Flower", "sans"],
+  },
   extend: {
    animation: {
     wiggle: "wiggle 2s ease-in-out",
-    slideupleft: "slideupleft 2s ease-in-out",
-    slidedownright: "slidedownright 2s ease-in-out",
-    slideupspinright: "slideupspinright 0.5s ease-in-out",
+    slideupleft: "slideupleft 4s linear",
+    slidedownright: "slidedownright 4s linear",
+    slideupspinright: "slideupspinright 0.5s linear",
     slideupspinleft: "slideupspinleft 0.5s ease-in-out",
-    slideup: "slideup 1s ",
+    slideup1: "slideup1 1s ",
+    slideup2: "slideup2 2s ",
+    slideup3: "slideup3 2.5s ",
+    slideup4: "slideup4 3s ",
+    slideup5: "slideup5 3.5s ",
     fade: "fade 1s ease-in",
    },
    keyframes: {
@@ -33,9 +40,14 @@ export default {
     slideupleft: {
      "0%": {
       translate: "20px 20px",
+      opacity: "0",
      },
-     "50%": {
+     "25%": {
       translate: "20px 20px",
+      opacity: "100",
+     },
+     "65%": {
+      translate: "5px 5px",
      },
      "100%": {
       translate: "0px 0px",
@@ -44,9 +56,14 @@ export default {
     slidedownright: {
      "0%": {
       translate: "-20px -20px",
+      opacity: "0",
      },
-     "50%": {
+     "25%": {
       translate: "-20px -20px",
+      opacity: "100",
+     },
+     "65%": {
+      translate: "-5px -5px",
      },
      "100%": {
       translate: "0px 0px",
@@ -76,8 +93,64 @@ export default {
       opacity: "100",
      },
     },
-    slideup: {
+    slideup1: {
      "0%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "100%": {
+      translate: "0px 0",
+      opacity: "100",
+     },
+    },
+    slideup2: {
+     "0%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "10%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "100%": {
+      translate: "0px 0",
+      opacity: "100",
+     },
+    },
+    slideup3: {
+     "0%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "20%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "100%": {
+      translate: "0px 0",
+      opacity: "100",
+     },
+    },
+    slideup4: {
+     "0%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "30%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "100%": {
+      translate: "0px 0",
+      opacity: "100",
+     },
+    },
+    slideup5: {
+     "0%": {
+      translate: "0 150px",
+      opacity: "0",
+     },
+     "40%": {
       translate: "0 150px",
       opacity: "0",
      },
@@ -97,5 +170,5 @@ export default {
    },
   },
  },
- plugins: [],
+ plugins: [require("tailwindcss-animation-delay")],
 };
