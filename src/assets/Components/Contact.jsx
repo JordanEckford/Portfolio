@@ -100,12 +100,15 @@ export const Contact = () => {
      }}
      className="border-2 border-orange-600 rounded-md resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
     />
-    <input
-     className={`m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 ${sendLoading ? "bg-slate-600" : null}`}
+    <button
+     className={`m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 hover:bg-slate-500 ${
+      sendLoading ? "bg-slate-600" : null
+     }`}
      type="submit"
-     value={sendLoading ? "Sending..." : "Send"}
      disabled={sendLoading ? true : false}
-    />
+    >
+     {sendLoading ? "Sending..." : "Send"}
+    </button>
     {sendLoading ? (
      <div className="w-[100%] m-auto col-start-1m col-span-4">
       <svg className="animate-spin m-auto mt-2 h-5 w-5 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

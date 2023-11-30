@@ -42,7 +42,7 @@ export const About = () => {
      </Link>
     </div>
    </div>
-   <div className="animate-slideup5 m-auto mt-5 mb-5 border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
+   <div className="hidden animate-slideup5 m-auto mt-5 mb-5 border-b-2 border-orange-600 xl:block xl:w-[60%] xl:max-w-{1000px]"></div>
   </div>
  );
 };
