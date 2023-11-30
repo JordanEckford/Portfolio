@@ -1,7 +1,9 @@
 export const Skills = () => {
  return (
   <div className="m-auto w-[80%] mt-28">
-   <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 fixed top-20 left-40 z-50">Skills</h2>
+   <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 ">Skills</h2>
+   </div>
    <div className="m-auto mt-10 grid grid-cols-2 lg:grid-cols-4 lg:w-[700px] justify-items-stretch gap-y-2 gap-x-2 w-80 xl:w-[1000px] xl:justify-items-center">
     <img
      className="animate-slideup1 h-10 xl:h-20 xl:w-[700px]"

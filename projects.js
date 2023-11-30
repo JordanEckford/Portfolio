@@ -1,5 +1,30 @@
 export const projectList = [
  {
+  name: "Pixel Plunge",
+  description: "A deep-sea fishing HTML5 game made with the game framework Phaser",
+  image: "/pixel-plunge.png",
+  text: [
+   "Pixel plunge is a deep-sea diving game where the object is to collect fish to earn money. Players can upgrade their equipment, and also see what fish they have caught and what they haven't encountered yet.",
+   "As a team of 5, we had 8 days to build this from scratch, which included learning how to use Phaser.",
+   "Phaser uses OOP (object oriented programming) to render different scenes, sprites, and obstacles. The docs aren't the best which made creating the game a challenge at first.",
+  ],
+  tech: ["Phaser", "React & React Router", "Javascript", "Firebase"],
+  link: "pixelplunge",
+  appLinks: {
+   liveApp: "https://pixel-plunge.netlify.app/",
+   gitHubFront: "https://github.com/sting-arrays/pixel-plunge",
+  },
+  additionalScreenshots: [
+   "/pixelplunge/1.png",
+   "/pixelplunge/2.png",
+   "/pixelplunge/3.png",
+   "/pixelplunge/4.png",
+   "/pixelplunge/5.png",
+   "/pixelplunge/6.png",
+   "/pixelplunge/7.png",
+  ],
+ },
+ {
   name: "NC News",
   description: "A full-stack mock news website made with React, Express, PostgreSQL, and Jest",
   image: "/ncnews.png",
@@ -15,21 +40,22 @@ export const projectList = [
    gitHubFront: "https://github.com/JordanEckford/nc-news-app",
    gitHubBack: "https://github.com/JordanEckford/nc-news",
   },
+  additionalScreenshots: ["/ncnews/1.png", "/ncnews/2.png", "/ncnews/3.png"],
  },
  {
-  name: "Pixel Plunge",
-  description: "A deep-sea fishing HTML5 game made with the game framework Phaser",
-  image: "/pixel-plunge.png",
+  name: "Weather App",
+  description: "A small weather app made with React and CSS which fetches data from the Open Weather API",
+  image: "/weatherapp.png",
   text: [
-   "Pixel plunge is a deep-sea diving game where the object is to collect fish to earn money. Players can upgrade their equipment, and also see what fish they have caught and what they haven't encountered yet.",
-   "As a team of 5, we had 8 days to build this from scratch, which included learning how to use Phaser.",
-   "Phaser uses OOP (object oriented programming) to render different scenes, sprites, and obstacles. The docs aren't the best which made creating the game a challenge at first.",
+   "This is a front end made to display data fetched from the Open Weather API in a fun, user friendly way. Users can input their desired location and see the current weather and the 5 day forecast",
+   "The styling has been made responsive, so the visuals are consistant and appealing no matter what device you use",
   ],
-  tech: ["Phaser", "React & React Router", "Javascript", "Firebase"],
-  link: "pixelplunge",
+  tech: ["React", "Javascript", "CSS"],
+  link: "weatherapp",
   appLinks: {
-   liveApp: "https://pixel-plunge.netlify.app/",
-   gitHubFront: "https://github.com/sting-arrays/pixel-plunge",
+   liveApp: "https://jordaneckfordweatherapp.netlify.app/",
+   gitHubFront: "https://github.com/JordanEckford/weather-app",
   },
+  additionalScreenshots: ["/weatherapp/1.png", "/weatherapp/2.png", "/weatherapp/3.png"],
  },
 ];

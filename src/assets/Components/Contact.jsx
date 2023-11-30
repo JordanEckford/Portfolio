@@ -34,7 +34,9 @@ export const Contact = () => {
  if (isSuccess) {
   return (
    <div className="mt-28">
-    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 fixed top-20 left-[95px] z-50">Contact Form</h2>
+    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
+    </div>
     <div className="flex flex-col m-auto mt-5 text-center xl:w-[70%]">
      <p className="text-green-600 text-xl text-center font-med">Message Sent!</p>
      <div className="mt-5 m-auto p-5 border-2 border-black w-[80%] rounded-md">
@@ -53,7 +55,9 @@ export const Contact = () => {
 
  return (
   <div className="mt-28">
-   <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 fixed top-20 left-[95px] z-50">Contact Form</h2>
+   <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
+   </div>
    <p className="m-auto mt-10 text-center text-xl">
     Any questions, suggestions, or just fancy telling me something? <br /> Let me know in the form below!
    </p>

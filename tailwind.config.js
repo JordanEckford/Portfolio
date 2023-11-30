@@ -18,6 +18,7 @@ export default {
     slideup4: "slideup4 3s ",
     slideup5: "slideup5 3.5s ",
     fade: "fade 1s ease-in",
+    scroll: "scroll 120s linear infinite",
    },
    keyframes: {
     wiggle: {
@@ -165,6 +166,14 @@ export default {
      },
      "100%": {
       opacity: "100",
+     },
+    },
+    scroll: {
+     "0%, 100%": {
+      translate: "-100% 0",
+     },
+     "50%": {
+      translate: "0% 0",
      },
     },
    },
