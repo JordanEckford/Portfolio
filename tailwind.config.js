@@ -7,7 +7,7 @@ export default {
   },
   extend: {
    animation: {
-    wiggle: "wiggle 2s ease-in-out",
+    wiggle: "wiggle 6s ease-in-out infinite",
     slideupleft: "slideupleft 4s linear",
     slidedownright: "slidedownright 4s linear",
     slideupspinright: "slideupspinright 0.5s linear",
@@ -19,23 +19,30 @@ export default {
     slideup5: "slideup5 3.5s ",
     fade: "fade 1s ease-in",
     scroll: "scroll 120s linear infinite",
+    slidebounce: "slidebounce 1s ease-in",
    },
    keyframes: {
     wiggle: {
      "0%, 100%": {
       transform: "rotate(0deg)",
      },
-     "15%": {
-      transform: "rotate(40deg)",
+     "43%": {
+      transform: "rotate(0deg)",
      },
-     "40%": {
-      transform: "rotate(-30deg)",
+     "45%": {
+      transform: "rotate(25deg)",
+     },
+     "52%": {
+      transform: "rotate(-20deg)",
+     },
+     "58%": {
+      transform: "rotate(10deg)",
+     },
+     "65%": {
+      transform: "rotate(-5deg)",
      },
      "70%": {
-      transform: "rotate(20deg)",
-     },
-     "90%": {
-      transform: "rotate(-10deg)",
+      transform: "rotate(0deg)",
      },
     },
     slideupleft: {
@@ -174,6 +181,20 @@ export default {
      },
      "50%": {
       translate: "0% 0",
+     },
+    },
+    slidebounce: {
+     "0%": {
+      translate: "0 150px",
+     },
+     "70%": {
+      translate: "0 0px",
+     },
+     "85%": {
+      translate: "0 10px",
+     },
+     "100%": {
+      translate: "0 0",
      },
     },
    },

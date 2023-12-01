@@ -58,7 +58,7 @@ export const Contact = () => {
    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
    </div>
-   <p className="m-auto mt-10 text-center text-xl">
+   <p className="m-auto mt-10 w-[90%] text-center text-xl">
     Any questions, suggestions, or just fancy telling me something? <br /> Let me know in the form below!
    </p>
    <form
