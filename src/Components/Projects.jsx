@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { projectList } from "../../../projects";
+import { projectList } from "../../projects";
 
 export const Projects = () => {
  return (

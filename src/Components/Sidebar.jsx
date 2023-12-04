@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { version } from "../../../version";
+import { version } from "../../version";
 
 export const SideBar = () => {
  const [isOpen, setIsOpen] = useState(false);

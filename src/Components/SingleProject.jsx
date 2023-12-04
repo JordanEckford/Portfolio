@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { projectList } from "../../../../projects";
+import { projectList } from "../../projects";
 export const SingleProject = () => {
  const { project_name } = useParams();
 

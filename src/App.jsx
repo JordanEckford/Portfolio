@@ -1,14 +1,14 @@
 import "./App.css";
-import { Header } from "./assets/Components/Header";
-import { Navbar } from "./assets/Components/Navbar";
+import { Header } from "./Components/Header";
+import { Navbar } from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
-import { Skills } from "./assets/Components/Skills";
-import { Projects } from "./assets/Components/Projects";
-import { Contact } from "./assets/Components/Contact";
-import { Home } from "./assets/Components/Home";
-import { SideBar } from "./assets/Components/Sidebar";
-import { SingleProject } from "./assets/Components/ProjectCards/SingleProject";
-import { About } from "./assets/Components/About";
+import { Skills } from "./Components/Skills";
+import { Projects } from "./Components/Projects";
+import { Contact } from "./Components/Contact";
+import { Home } from "./Components/Home";
+import { SideBar } from "./Components/Sidebar";
+import { SingleProject } from "./Components/SingleProject";
+import { About } from "./Components/About";
 
 function App() {
  return (
