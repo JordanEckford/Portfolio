@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { version } from "../../version";
 
 export const SideBar = () => {
@@ -26,21 +26,61 @@ export const SideBar = () => {
     } ease-in-out duration-300`}
    >
     <nav className="flex flex-col place-content-around h-[40vh] m-auto  mt-20">
-     <Link to="/" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
+     <NavLink
+      to="/"
+      onClick={() => setIsOpen(!isOpen)}
+      className={({ isActive }) =>
+       isActive
+        ? "text-2xl text-black m-auto mt-0 mb-0 hover:text-black hover:underline"
+        : "text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline"
+      }
+     >
       Home
-     </Link>
-     <Link to="/skills" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
+     </NavLink>
+     <NavLink
+      to="/skills"
+      onClick={() => setIsOpen(!isOpen)}
+      className={({ isActive }) =>
+       isActive
+        ? "text-2xl text-black m-auto mt-0 mb-0 hover:text-black hover:underline"
+        : "text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline"
+      }
+     >
       Skills
-     </Link>
-     <Link to="/projects" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
+     </NavLink>
+     <NavLink
+      to="/projects"
+      onClick={() => setIsOpen(!isOpen)}
+      className={({ isActive }) =>
+       isActive
+        ? "text-2xl text-black m-auto mt-0 mb-0 hover:text-black hover:underline"
+        : "text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline"
+      }
+     >
       Projects
-     </Link>
-     <Link to="/about" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
+     </NavLink>
+     <NavLink
+      to="/about"
+      onClick={() => setIsOpen(!isOpen)}
+      className={({ isActive }) =>
+       isActive
+        ? "text-2xl text-black m-auto mt-0 mb-0 hover:text-black hover:underline"
+        : "text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline"
+      }
+     >
       About
-     </Link>
-     <Link to="/contact" onClick={() => setIsOpen(!isOpen)} className="text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline">
+     </NavLink>
+     <NavLink
+      to="/contact"
+      onClick={() => setIsOpen(!isOpen)}
+      className={({ isActive }) =>
+       isActive
+        ? "text-2xl text-black m-auto mt-0 mb-0 hover:text-black hover:underline"
+        : "text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline"
+      }
+     >
       Contact
-     </Link>
+     </NavLink>
     </nav>
     <div
      className="mt-60"

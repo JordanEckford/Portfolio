@@ -4,7 +4,6 @@ import { useContext } from "react";
 
 export const Home = () => {
  const { theme, setTheme } = useContext(ThemeContext);
- console.log(theme);
  return (
   <div className={`animate-fade m-auto text-center mt-40 w-[80%] ${theme === "light" ? "bg-white" : "bg-slate-500"}`}>
    <p className="mt-10 text-xl sm:text-2xl">Hello, I'm</p>
