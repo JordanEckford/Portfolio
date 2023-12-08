@@ -7,15 +7,15 @@ export const SideBar = () => {
  const [colour, setColour] = useState(true);
  const [swap, setSwap] = useState(true);
  const [clickCount, setClickCount] = useState(0);
- const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
+ const genericHamburgerLine = `h-[4px] w-[30px] my-[3px] rounded-full bg-white transition ease transform duration-300`;
 
  return (
   <div className="sm:hidden">
    <button
-    className="flex flex-col h-10 w-10 border-2 border-black bg-orange-500 rounded justify-center items-center group fixed top-4 right-3 z-40"
+    className={`flex flex-col h-10 w-10 ${isOpen ? "bg-orange-400 " : "bg-orange-500 "}rounded justify-center items-center group fixed top-4 right-3 z-40`}
     onClick={() => setIsOpen(!isOpen)}
    >
-    <div className={`${genericHamburgerLine} ${isOpen ? "rotate-45 translate-y-3 opacity-100" : "opacity-100"}`} />
+    <div className={`${genericHamburgerLine} ${isOpen ? "rotate-45 translate-y-2 opacity-100" : "opacity-100"}`} />
     <div className={`${genericHamburgerLine} ${isOpen ? "opacity-0" : "opacity-100"}`} />
     <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-3 opacity-100" : "opacity-100"}`} />
    </button>

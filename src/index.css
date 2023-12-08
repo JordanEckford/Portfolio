@@ -1,37 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* #container {
- height: 350px;
- position: relative;
-}
-
-#photobanner {
- position: absolute;
- display: flex;
- top: 0px;
- left: 0px;
- white-space: nowrap;
- animation: bannermove 10s linear infinite;
-}
-
-#photobanner img {
- margin: 0 0.5em;
-}
-
-@keyframes bannermove {
- 0% {
-  transform: translate(0, 0);
- }
- 100% {
-  transform: translate(-100%, 0);
- }
-}
-#container:hover {
- overflow: auto;
-}
-
-#container:hover .photobanner {
- animation-play-state: paused;
-} */

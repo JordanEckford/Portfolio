@@ -4,7 +4,7 @@ export const Skills = () => {
    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 ">Skills</h2>
    </div>
-   <div className="animate-fade m-auto mt-10 grid grid-cols-2 lg:grid-cols-4 lg:w-[700px] justify-items-stretch gap-y-2 gap-x-2 w-80 xl:w-[1000px] xl:justify-items-center">
+   <div className="animate-fade m-auto mt-10 grid grid-cols-2 lg:grid-cols-4 lg:w-[700px] justify-items-stretch gap-y-4 gap-x-3 w-80 xl:w-[1000px] xl:justify-items-center">
     <img
      className="animate-slidebounce h-10 xl:h-20 xl:w-[700px]"
      src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"

@@ -14,15 +14,29 @@ export const Projects = () => {
        key={project.link}
        className={`animate-slideup${
         (index % 4) + 1
-       } border-2 border-slate-200 p-0 rounded-lg mb-5 hover:bg-slate-200 hover:scale-105 duration-300 hover:border-2 hover:border-black overflow-hidden m-auto shadow-xl xl:m-0 xl:h-[350px] xl:mb-[50px] xl:w-[300px] self-stretch`}
+       } border-2 border-slate-200 p-0 rounded-lg mb-5 hover:bg-slate-100 hover:scale-105 duration-300 hover:border-2 hover:border-black overflow-hidden m-auto shadow-xl xl:m-0 xl:h-[300px] xl:mb-[50px] xl:w-[700px] self-stretch`}
       >
-       <Link to={`/projects/${project.link}`}>
-        <div className=" xl:h-[100%] xl:flex xl:flex-col xl:justify-between">
-         <h3 className="text-xl p-1 text-orange-600 font-bold">{project.name}</h3>
-         <p className="p-1">{project.description}</p>
-         <img className="rounded-b-lg" src={project.image} alt={`a screenshot of the app called ${project.name} `} />
+       <div className=" xl:h-[100%] flex flex-col justify-between xl:grid xl:grid-rows-3 xl:grid-cols-2">
+        <h3 className="text-xl p-1 text-orange-600 font-bold xl:text-center">{project.name}</h3>
+        <p className="p-1 xl:text-center">{project.description}</p>
+        <img
+         className="rounded-b-lg xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px] xl:aspect-auto"
+         src={project.image}
+         alt={`a screenshot of the app called ${project.name} `}
+        />
+        <div className="col-start-2 row-start-3 flex flex-col">
+         <Link className="m-auto mb-0 w-[40%]" to={`/projects/${project.link}`}>
+          <button className="border-2 border-black rounded-md xl:mb-0 xl:mt-0 hover:bg-orange-500 hover:text-white duration-1000 shadow-md w-[100%] h-[40px] my-[10px] m-auto text-[15px]">
+           More Info
+          </button>
+         </Link>
+         <a className="m-auto w-[40%]" href={project.appLinks.liveApp} target="_blank">
+          <button className="border-2 border-black rounded-md bg-orange-500 text-white hover:bg-orange-200 hover:text-black duration-1000 shadow-md w-[100%] h-[40px] my-[10px] m-auto text-[15px]">
+           Live App
+          </button>
+         </a>
         </div>
-       </Link>
+       </div>
       </li>
      );
     })}
