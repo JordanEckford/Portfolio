@@ -17,7 +17,7 @@ export const Projects = () => {
        } border-2 border-slate-200 p-0 rounded-lg mb-5 hover:bg-slate-100 hover:scale-105 duration-300 hover:border-2 hover:border-black overflow-hidden m-auto shadow-xl xl:m-0 xl:h-[300px] xl:mb-[50px] xl:w-[700px] self-stretch`}
       >
        <div className=" xl:h-[100%] flex flex-col justify-between xl:grid xl:grid-rows-3 xl:grid-cols-2">
-        <h3 className="text-xl p-1 text-orange-600 font-bold xl:text-center">{project.name}</h3>
+        <h3 className="text-xl p-1 xl:pt-[20px] text-orange-600 font-bold xl:text-center">{project.name}</h3>
         <p className="p-1 xl:text-center">{project.description}</p>
         <img
          className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px]"
