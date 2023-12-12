@@ -31,6 +31,7 @@ export const projectList = [
   text: [
    "NC News is a full-stack mock news website. It is fully interactive, allowing users to read existing articles and filter by categories. Once a user has logged in, they can comment, like, and post articles themselves.",
    "The data is served from the back-end hosted on elephantSQL. The endpoints and API was built with Express.js and each feature was heavily tested with Jest to ensure the data served was correct.",
+   "The site uses ptimistic rendering to make the users experience better and give the site a more responsive feel",
    "When a user first tries out the app, they are logged in as a test user so that the full functionality of the site can be experienced, however there is an option to logout and create a new account.",
   ],
   tech: ["React & React Router", "Express.js", "Jest", "Javascript", "PostgreSQL"],
