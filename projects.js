@@ -43,6 +43,23 @@ export const projectList = [
   additionalScreenshots: ["/ncnews/1.png", "/ncnews/2.png", "/ncnews/3.png"],
  },
  {
+  name: "League of Legends Info App",
+  description: "An app made to display information fetched from the Riot Games API using React and CSS.",
+  image: "/leagueoflegendsapp.png",
+  text: [
+   "This is a front end made to display data fetched from the Riot Games API and displays this information in a user friendly way.",
+   "Users can see a list of champions and items, filter them by specific roles and ststs and also get some detailed champion information. The champions skins are also displayed in a carousel",
+   "The site is optimised for both smaller devices and larger screens, with smaller devices having access to a side bar to save space",
+  ],
+  tech: ["React", "Javascript", "CSS"],
+  link: "leagueoflegends",
+  appLinks: {
+   liveApp: "https://jordaneckfordleagueoflegends.netlify.app/",
+   gitHubFront: "https://github.com/JordanEckford/league-of-legends",
+  },
+  additionalScreenshots: ["/lol/1.png", "/lol/2.png", "/lol/3.png", "/lol/4.png", "/lol/5.png"],
+ },
+ {
   name: "Weather App",
   description: "A small weather app made with React and CSS which fetches data from the Open Weather API",
   image: "/weatherapp.png",

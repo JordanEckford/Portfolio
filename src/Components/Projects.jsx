@@ -20,7 +20,7 @@ export const Projects = () => {
         <h3 className="text-xl p-1 text-orange-600 font-bold xl:text-center">{project.name}</h3>
         <p className="p-1 xl:text-center">{project.description}</p>
         <img
-         className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px] xl:aspect-auto"
+         className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px]"
          src={project.image}
          alt={`a screenshot of the app called ${project.name} `}
         />
