@@ -3,7 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 export const Navbar = () => {
  return (
   <div className="bg-orange-500 border-b-[1px] border-black top-0 left-0 fixed h-[70px] w-[100%] shadow-lg">
-   <img src="/jordanicon.png" alt="" className="w-[60px] h-[60px] fixed top-[5px] left-[5px]" />
+   <Link to="/">
+    <img src="/jordanicon.png" alt="" className="w-[60px] h-[60px] fixed top-[5px] left-[5px]" />
+   </Link>
    <nav className="hidden sm:flex flex-row place-content-around text-3xl p-5 xl:pl-60 xl:pr-60 m-auto w-[80%] max-w-{1000px]">
     <NavLink
      to="/"

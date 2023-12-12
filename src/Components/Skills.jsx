@@ -1,6 +1,6 @@
 export const Skills = () => {
  return (
-  <div className="m-auto w-[80%] mt-28">
+  <div className="m-auto w-[90%] mt-28">
    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 ">Skills</h2>
    </div>

@@ -64,7 +64,7 @@ export const Contact = () => {
    <form
     ref={form}
     onSubmit={sendEmail}
-    className="animate-fade m-auto mt-10 w-[80%] flex flex-col xl:w-[60%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
+    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[40%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
    >
     <label className="hidden">unique_id</label>
     <input type="text" name="unique_id" value={uniqueID} readOnly className="hidden" />
@@ -101,7 +101,7 @@ export const Contact = () => {
      className="border-2 border-orange-600 rounded-md resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
     />
     <button
-     className={`m-auto mt-5 bg-orange-600 w-[50%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 hover:bg-slate-500 ${
+     className={`m-auto mt-5 bg-orange-600 w-[40%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 hover:bg-slate-500 ${
       sendLoading ? "bg-slate-600" : null
      }`}
      type="submit"
