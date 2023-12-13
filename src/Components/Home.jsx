@@ -18,10 +18,20 @@ export const Home = () => {
    <div className="m-auto mt-20 mb-5 border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
    <div className="flex flex-row w-80 m-auto">
     <a className="w-40" href="https://www.linkedin.com/in/jordan-eckford-3a6b18103/" target="_blank">
-     <img className="w-[30%] m-auto animate-wiggle hover:scale-125 duration-200" src="/linkedin.png" />
+     <img
+      className="w-[30%] h-[100%] m-auto animate-wiggle hover:scale-125 duration-200"
+      src="/linkedin.png"
+      alt="a circular logo representing LinkedIn"
+      aria-label="visit my LinkedIn page here"
+     />
     </a>
     <a className="w-40" href="https://github.com/JordanEckford" target="_blank">
-     <img className="w-[30%] m-auto animate-wiggle hover:scale-125 duration-200" src="/github.png" />
+     <img
+      className="w-[30%] h-[100%] m-auto animate-wiggle hover:scale-125 duration-200"
+      src="/github.png"
+      alt="a circular logo representing GitHub"
+      aria-label="visit my GitHub page here"
+     />
     </a>
    </div>
    <div className="m-auto mt-5 mb-5 border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
