@@ -17,7 +17,7 @@ export default {
     slideup3: "slideup3 2.5s ",
     slideup4: "slideup4 3s ",
     slideup5: "slideup5 3.5s ",
-    fade: "fade 1s ease-in",
+    fade: "fade 0.2s ease-in",
     scroll: "scroll 120s linear infinite",
     slidebounce: "slidebounce 1s ease-in",
    },
