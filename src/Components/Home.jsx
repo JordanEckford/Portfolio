@@ -1,15 +1,24 @@
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../Contexts/ThemeContext.jsx";
 import { useContext } from "react";
+import { Reveal } from "./Reveal.jsx";
+import { Slider } from "@material-tailwind/react";
+import { Slide } from "./Slide.jsx";
 
 export const Home = () => {
  const { theme, setTheme } = useContext(ThemeContext);
  return (
   <div className={`animate-fade m-auto text-center mt-40 w-[80%] ${theme === "light" ? "bg-white" : "bg-slate-500"}`}>
-   <p className="mt-10 text-xl sm:text-2xl">Hello, my name is</p>
-   <h1 className="text-left text-7xl sm:text-8xl text-black mt-5 sm:text-center sm:mr-40 hover:scale-110 duration-1000 animate-slidedownright">Jordan</h1>
-   <h1 className="text-right text-7xl sm:text-8xl text-orange-600 mb-5 sm:text-center sm:ml-40 hover:scale-110 duration-1000 animate-slideupleft"> Eckford</h1>
-   <p className="sm:text-2xl">I'm an aspiring Software Developer</p>
+   <Slide>
+    <p className="text-xl sm:text-2xl">Hello, my name is</p>
+   </Slide>
+   <Reveal width="100%">
+    <h1 className="text-left text-7xl sm:text-8xl text-black mt-5 sm:text-center sm:mr-40 hover:scale-110 duration-1000">Jordan</h1>
+    <h1 className="text-right text-7xl sm:text-8xl text-orange-600 mb-5 sm:text-center sm:ml-40 hover:scale-110 duration-1000"> Eckford</h1>
+   </Reveal>
+   <Slide>
+    <p className="sm:text-2xl">I'm an aspiring Software Developer</p>
+   </Slide>
    <div className="mt-20 sm:text-2xl"></div>
    <Link to="/projects">
     <button className="border-2 border-black p-5 rounded-md hover:bg-orange-200 duration-1000 animate-slideup5 shadow-md">Check out my work!</button>

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Slide } from "./Slide";
 
 export const Contact = () => {
  const form = useRef();
@@ -58,50 +59,60 @@ export const Contact = () => {
    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
    </div>
-   <p className="m-auto mt-10 w-[90%] text-center text-xl">
-    Any questions, suggestions, or just fancy telling me something? <br /> Let me know in the form below!
-   </p>
+   <Slide>
+    <p className="m-auto mt-10 w-[90%] text-center text-xl">
+     Any questions, suggestions, or just fancy telling me something? <br /> Let me know in the form below!
+    </p>
+   </Slide>
    <form
     ref={form}
     onSubmit={sendEmail}
-    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[40%] xl:grid xl:grid-cols-4 xl:grid-rows-6 xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
+    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[40%] xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
    >
     <label className="hidden">unique_id</label>
     <input type="text" name="unique_id" value={uniqueID} readOnly className="hidden" />
-    <label className="xl:row-start-1 xl:col-span-2 xl:mt-8">Name</label>
-    <input
-     required
-     type="text"
-     name="user_name"
-     value={name}
-     onChange={(event) => {
-      setName(event.target.value);
-     }}
-     className="border-2 border-orange-600 rounded-md text-center row-start-2 xl:col-span-2 "
-    />
-    <label className="mt-5 xl:row-start-1 xl:col-span-2 xl:mt-8">Email</label>
-    <input
-     required
-     type="email"
-     name="user_email"
-     value={email}
-     onChange={(event) => {
-      setEmail(event.target.value);
-     }}
-     className="border-2 border-orange-600 rounded-md text-center row-start-2 xl:col-span-2"
-    />
-    <label className="mt-5 xl:row-start-3 xl:col-span-4 xl:mt-8">Message</label>
-    <textarea
-     required
-     name="message"
-     value={message}
-     onChange={(event) => {
-      setMessage(event.target.value);
-     }}
-     className="border-2 border-orange-600 rounded-md resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4"
-    />
+    <div className="w-[100%] mb-[20px] flex flex-row justify-between">
+     <Slide width={"45%"} margin="0 auto 0 0">
+      <input
+       placeholder="Name"
+       required
+       type="text"
+       name="user_name"
+       value={name}
+       onChange={(event) => {
+        setName(event.target.value);
+       }}
+       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 "
+      />
+     </Slide>
+     <Slide width={"45%"} margin="0 0 0 auto">
+      <input
+       placeholder="Email"
+       required
+       type="email"
+       name="user_email"
+       value={email}
+       onChange={(event) => {
+        setEmail(event.target.value);
+       }}
+       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2"
+      />
+     </Slide>
+    </div>
+    <Slide width="100%">
+     <textarea
+      placeholder="Message"
+      required
+      name="message"
+      value={message}
+      onChange={(event) => {
+       setMessage(event.target.value);
+      }}
+      className="border-2 border-orange-600 rounded-md resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4 w-[100%] h-[200px]"
+     />
+    </Slide>
     <button
-     className={`m-auto mt-5 bg-orange-600 w-[40%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 hover:bg-slate-500 ${
+     className={`animate-slideup1 m-auto mt-5 bg-orange-600 w-[40%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 hover:bg-slate-500 ${
       sendLoading ? "bg-slate-600" : null
      }`}
      type="submit"

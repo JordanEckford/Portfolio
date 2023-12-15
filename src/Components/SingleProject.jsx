@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { projectList } from "../../projects";
+import { Slide } from "./Slide";
+import { Reveal } from "./Reveal";
 export const SingleProject = () => {
  const { project_name } = useParams();
 
@@ -12,7 +14,12 @@ export const SingleProject = () => {
 
  return (
   <>
-   <div className="animate-fade m-auto w-[80%] text-center mt-28">
+   <div
+    className="m-auto w-[80%] text-center mt-28"
+    onLoad={() => {
+     window.scroll(0, 0);
+    }}
+   >
     <Link
      to="/projects"
      className="text-xs z-10 text-left fixed top-[80px] left-4 text-white p-1 hover:text-black bg-orange-600 border-2 border-black rounded-md xl:text-xl xl:top-[80px]"
@@ -32,9 +39,11 @@ export const SingleProject = () => {
      <ul className="text-xs mb-5 xl:m-auto">
       {currentProject.text.map((text, index) => {
        return (
-        <li className="text-[20px] leading-[20px] mb-2 xl:text-xl xl:text-left xl:ml-5" key={index}>
-         {text}
-        </li>
+        <Slide>
+         <li className="text-[24px] leading-[26px] sm:text-[30px] text-left sm:leading-[32px] mb-2 xl:text-xl xl:text-left xl:ml-5" key={index}>
+          {text}
+         </li>
+        </Slide>
        );
       })}
      </ul>
@@ -43,38 +52,45 @@ export const SingleProject = () => {
       <p className=" text-[25px] leading-[20px] mb-5 underline xl:text-2xl xl:mt-10">Tech Stack Used</p>
       <ul className="text-[20px] leading-[20px] col-span-1 xl:text-xl xl:mt-5">
        {currentProject.tech.map((tech) => {
-        return <li key={tech}>{tech}</li>;
+        return (
+         <Slide>
+          <li className="text-[24px] leading-[26px] sm:text-[30px] sm:leading-[32px]" key={tech}>
+           {tech}
+          </li>
+         </Slide>
+        );
        })}
       </ul>
      </div>
      <div className="mt-5 mb-5 border-b-2 border-orange-600 xl:hidden"></div>
-     <div>
-      <h4 className="text-[25px] leading-[20px] mb-5 underline text-sm xl:text-2xl xl:mt-10">Check it out</h4>
-      <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl xl:mt-5">
-       <a href={currentProject.appLinks.liveApp} target="_blank">
-        <button className="border-2 border-black rounded-md bg-orange-500 text-white font-black duration-1000 shadow-md w-[60%] xl:w-[40%] h-[40px] my-[10px] m-auto text-[20px] hover:bg-white hover:text-black">
-         Live App
-        </button>
-       </a>
-      </p>
-      <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl">
-       <a href={currentProject.appLinks.gitHubFront} target="_blank">
-        <button className="border-2 border-black rounded-md bg-orange-500 text-white font-black duration-1000 shadow-md w-[60%] xl:w-[40%] h-[40px] my-[10px] m-auto text-[20px] hover:bg-white hover:text-black">
-         GitHub <span className="text-xs">(Front-end)</span>
-        </button>
-       </a>
-      </p>
-      {currentProject.appLinks.gitHubBack ? (
-       <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl">
-        <a href={currentProject.appLinks.gitHubBack} target="_blank">
+     <Reveal>
+      <div>
+       <h4 className="text-[25px] leading-[20px] mb-5 underline text-sm xl:text-2xl xl:mt-10">Check it out</h4>
+       <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl xl:mt-5">
+        <a href={currentProject.appLinks.liveApp} target="_blank">
          <button className="border-2 border-black rounded-md bg-orange-500 text-white font-black duration-1000 shadow-md w-[60%] xl:w-[40%] h-[40px] my-[10px] m-auto text-[20px] hover:bg-white hover:text-black">
-          GitHub <span className="text-xs">(Back-end)</span>
+          Live App
          </button>
         </a>
        </p>
-      ) : null}
-     </div>
-
+       <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl">
+        <a href={currentProject.appLinks.gitHubFront} target="_blank">
+         <button className="border-2 border-black rounded-md bg-orange-500 text-white font-black duration-1000 shadow-md w-[60%] xl:w-[40%] h-[40px] my-[10px] m-auto text-[20px] hover:bg-white hover:text-black">
+          GitHub <span className="text-xs">(Front-end)</span>
+         </button>
+        </a>
+       </p>
+       {currentProject.appLinks.gitHubBack ? (
+        <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl">
+         <a href={currentProject.appLinks.gitHubBack} target="_blank">
+          <button className="border-2 border-black rounded-md bg-orange-500 text-white font-black duration-1000 shadow-md w-[60%] xl:w-[40%] h-[40px] my-[10px] m-auto text-[20px] hover:bg-white hover:text-black">
+           GitHub <span className="text-xs">(Back-end)</span>
+          </button>
+         </a>
+        </p>
+       ) : null}
+      </div>
+     </Reveal>
      <div className="mt-5 mb-5 border-b-2 border-orange-600 xl:hidden"></div>
     </div>
    </div>
