@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { projectList } from "../../projects";
 import { Reveal } from "./Reveal";
+import { Slide } from "./Slide";
 
 export const Projects = () => {
  return (
@@ -17,14 +18,15 @@ export const Projects = () => {
         className={`border-2 border-slate-200 p-0 rounded-lg mb-5 hover:bg-slate-100 hover:border-2 hover:border-black overflow-hidden m-auto shadow-xl xl:m-auto xl:h-[300px] xl:mb-[50px] xl:w-[700px] self-center`}
        >
         <div className=" xl:h-[100%] flex flex-col justify-between xl:grid xl:grid-rows-3 xl:grid-cols-2">
-         <h3 className="text-2xl sm:text-4xl p-2 xl:pt-[20px] text-orange-600 font-bold xl:text-center">{project.name}</h3>
-         <p className="p-2 xl:text-center">{project.description}</p>
-         <img
-          id="test"
-          className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px]"
-          src={project.image}
-          alt={`a screenshot of the app called ${project.name} `}
-         />
+         <Slide>
+          <h3 className="text-2xl sm:text-4xl p-2 xl:pt-[20px] text-orange-600 font-bold xl:text-center">{project.name}</h3>
+         </Slide>
+         <Slide>
+          <p className="p-2 xl:text-center">{project.description}</p>
+         </Slide>
+         <div className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px] overflow-hidden">
+          <img id="test" className="h-[100%]" src={project.image} alt={`a screenshot of the app called ${project.name} `} />
+         </div>
          <div className="col-start-2 row-start-3 flex flex-col">
           <Link className="m-auto mb-0 w-[40%]" to={`/projects/${project.link}`}>
            <button className="border-2 border-black rounded-md xl:mb-0 xl:mt-0 hover:bg-orange-500 hover:text-white duration-1000 shadow-md w-[100%] h-[40px] my-[10px] m-auto text-[15px]">

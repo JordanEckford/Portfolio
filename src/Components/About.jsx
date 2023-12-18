@@ -8,8 +8,13 @@ export const About = () => {
    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">About Me</h2>
    </div>
-   <div className="m-auto mt-10 text-center w-[90%] xl:w-[1200px] xl:grid xl:grid-cols-2 xl:grid-rows-3 xl:max-h-[700px]">
-    <img className="animate-slideup1 m-auto mt-5 rounded-full w-[80vw] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3" src="jordan.jpg" />
+   <div className="m-auto mt-10 text-center w-[90%] xl:w-[1200px] flex flex-col">
+    <Reveal>
+     <img
+      className="m-auto mt-5 rounded-full w-[330px] h-[250px] xl:w-[500px] xl:h-[370px] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3"
+      src="jordan.jpg"
+     />
+    </Reveal>
     <Slide>
      <p className="m-auto mt-10">
       My name is {"  "}
