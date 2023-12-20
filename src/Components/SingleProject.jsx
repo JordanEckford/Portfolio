@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { projectList } from "../../projects";
 import { Slide } from "./Slide";
 import { Reveal } from "./Reveal";
+import { useEffect } from "react";
 export const SingleProject = () => {
  const { project_name } = useParams();
 
@@ -12,14 +13,13 @@ export const SingleProject = () => {
   }
  }
 
+ useEffect(() => {
+  window.scroll(0, 0);
+ }, []);
+
  return (
   <>
-   <div
-    className="m-auto w-[80%] text-center mt-28"
-    onLoad={() => {
-     window.scroll(0, 0);
-    }}
-   >
+   <div className="m-auto w-[80%] text-center mt-28">
     <Link
      to="/projects"
      className="text-xs z-10 text-left fixed top-[80px] left-4 text-white p-1 hover:text-black bg-orange-600 border-2 border-black rounded-md xl:text-xl xl:top-[80px]"
@@ -30,11 +30,13 @@ export const SingleProject = () => {
      <h3 className="-mt-14 text-white sm:hidden text-center text-2xl xl:text-4xl">{currentProject.name}</h3>
     </div>
     <div className="xl:grid mt-10 xl:grid-cols-2 xl:grid-rows-2 xl:mt-20">
-     <img
-      src={currentProject.image}
-      alt={`a screenshot of the app called ${currentProject.name}`}
-      className="w-[80vw] sm:w-[500px] m-auto border-2 border-black rounded-lg xl:row-span-1 xl:mt-0 shadow-xl"
-     />
+     <Reveal>
+      <img
+       src={currentProject.image}
+       alt={`a screenshot of the app called ${currentProject.name}`}
+       className="w-[80vw] sm:w-[500px] m-auto border-2 border-black rounded-lg xl:row-span-1 xl:mt-0 shadow-xl"
+      />
+     </Reveal>
      <div className="mt-5 mb-5 border-b-2 border-orange-600 xl:hidden"></div>
      <ul className="text-xs mb-5 xl:m-auto">
       {currentProject.text.map((text, index) => {

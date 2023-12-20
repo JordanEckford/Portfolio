@@ -14,14 +14,16 @@ export const Home = () => {
    </Slide>
    <Reveal width="100%">
     <h1 className="text-left text-7xl sm:text-8xl text-black mt-5 sm:text-center sm:mr-40 hover:scale-110 duration-1000">Jordan</h1>
-    <h1 className="text-right text-7xl sm:text-8xl text-orange-600 mb-5 sm:text-center sm:ml-40 hover:scale-110 duration-1000"> Eckford</h1>
+    <h1 className="text-right text-7xl sm:text-8xl text-orange-600 mb-5 sm:text-center sm:ml-40 hover:scale-110 duration-1000 font-fancy"> Eckford</h1>
    </Reveal>
    <Slide>
     <p className="sm:text-2xl">I'm an aspiring Software Developer</p>
    </Slide>
    <div className="mt-20 sm:text-2xl"></div>
    <Link to="/projects">
-    <button className="border-2 border-black p-5 rounded-md hover:bg-orange-200 duration-1000 animate-slideup5 shadow-md">Check out my work!</button>
+    <button className="border-[1px] border-black p-5 rounded-md hover:bg-orange-200 duration-1000 animate-slideup5 shadow-md bg-gradient-to-r from-orange-400 to-orange-200">
+     Check out my work!
+    </button>
    </Link>
 
    <div className="m-auto mt-20 mb-5 border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>

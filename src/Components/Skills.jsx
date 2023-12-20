@@ -3,8 +3,8 @@ import { Slide } from "./Slide";
 export const Skills = () => {
  return (
   <div className="m-auto w-[90%] mt-28">
-   <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
-    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10 ">Skills</h2>
+   <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
+    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Skills</h2>
    </div>
    <div className="animate-fade m-auto mt-10 grid grid-cols-2 lg:grid-cols-4 lg:w-[700px] justify-items-stretch gap-y-4 gap-x-3 w-80 xl:w-[1000px] xl:justify-items-center">
     <Slide>

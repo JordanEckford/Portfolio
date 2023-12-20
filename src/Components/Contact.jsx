@@ -35,7 +35,7 @@ export const Contact = () => {
  if (isSuccess) {
   return (
    <div className="mt-28">
-    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
      <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
     </div>
     <div className="flex flex-col m-auto mt-5 text-center xl:w-[70%]">
@@ -56,7 +56,7 @@ export const Contact = () => {
 
  return (
   <div className="mt-28">
-   <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+   <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
    </div>
    <Slide>

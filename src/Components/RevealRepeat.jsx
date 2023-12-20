@@ -8,14 +8,12 @@ export const RevealRepeat = ({ children, width = "100%", margin = "0 auto" }) =>
  const slideControls = useAnimation();
  useEffect(() => {
   if (isInView) {
-   console.log(isInView);
    mainControls.start("visible");
    slideControls.start("visible");
   }
  }, [isInView]);
  useEffect(() => {
   if (!isInView) {
-   console.log(isInView);
    mainControls.start("hidden");
    slideControls.start("hidden");
   }

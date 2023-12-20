@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
 import { Slide } from "./Slide";
 import { Reveal } from "./Reveal";
+import { useEffect } from "react";
 
 export const About = () => {
+ useEffect(() => {
+  window.scroll(0, 0);
+ }, []);
+
  return (
   <div className="mt-28">
-   <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+   <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">About Me</h2>
    </div>
    <div className="m-auto mt-10 text-center w-[90%] xl:w-[1200px] flex flex-col">
@@ -18,33 +23,34 @@ export const About = () => {
     <Slide>
      <p className="m-auto mt-10">
       My name is {"  "}
-      <span className="text-xl">
+      <span className="text-2xl">
        Jordan <span className="text-orange-600">Eckford</span>
       </span>{" "}
-      and I recently completed a Software Development bootcamp with{" "}
-      <a href="https://northcoders.com/" className="text-xl text-red-600 hover:text-slate-400">
+      , a recent graduate of the Software Development bootcamp at{" "}
+      <a href="https://northcoders.com/" className="text-2xl text-red-600 hover:text-slate-400">
        Northcoders
       </a>
-      , graduating from the course in November 2023.
+      , having completed the program in November 2023.
      </p>
     </Slide>
 
     <Slide>
      <p className="">
-      I have a BSc in Geology and a background in Engineering Geology where my career over the last 6 years has been. I have always had an interest in coding,
-      but have never had the chance to fully explore and develop my skills. After completing courses on{" "}
-      <a href="https://www.freecodecamp.org/" className="text-xl text-slate-600">
+      Prior to embarking on this career shift, I held a BSc in Geology and worked in the field of Engineering Geology for the past six years. Despite my
+      background, I have always harbored a keen interest in coding and software development. However, the opportunity to fully explore and develop my skills in
+      this domain only presented itself recently when I began completing courses on{" "}
+      <a href="https://www.freecodecamp.org/" className="text-2xl text-slate-600">
        FreeCodeCamp
       </a>{" "}
-      i decided it was time to persue this full time.
+      . This newfound passion led me to pursue a career in software development full-time.
      </p>
     </Slide>
     <br />
     <div className="xl:col-start-2 row-start-3 row-span-1">
      <Slide>
       <p className="">
-       I welcome all suggestions, criticisms, or positive feedback on any of my projects. Even if you would just like to know more about any projects, get in
-       touch with me below!
+       I am eager to learn from experienced developers and welcome all feedback, constructive criticism, or positive remarks on my projects. Feel free to reach
+       out to me if you have any questions or would like to learn more about my work.
       </p>
      </Slide>
 

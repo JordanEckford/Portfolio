@@ -22,7 +22,7 @@ export const SideBar = () => {
    </button>
 
    <div
-    className={`top-0 z-30 left-0 fixed bg-orange-400 border-2 border-black w-[100vw] h-[100vh] p-10 ${
+    className={`top-0 z-40 left-0 fixed bg-orange-400 border-2 border-black w-[100vw] h-[100vh] p-10 ${
      isOpen ? "translate-x-100" : "translate-x-full"
     } ease-in-out duration-300`}
    >

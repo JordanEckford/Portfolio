@@ -3,7 +3,8 @@ export default {
  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
  theme: {
   fontFamily: {
-   fancy: ["Roboto", "Caveat", "Indie Flower", "sans"],
+   fancy: ["Rubik Doodle Shadow", "Roboto", "Caveat", "Indie Flower", "sans"],
+   header: ["Shadows Into Light", "Caveat", "Indie Flower", "sans"],
   },
   extend: {
    animation: {
