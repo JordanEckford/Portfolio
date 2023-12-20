@@ -26,7 +26,7 @@ export const About = () => {
       <span className="text-2xl">
        Jordan <span className="text-orange-600">Eckford</span>
       </span>{" "}
-      , a recent graduate of the Software Development bootcamp at{" "}
+      . I'm a recent graduate of the Software Development bootcamp at{" "}
       <a href="https://northcoders.com/" className="text-2xl text-red-600 hover:text-slate-400">
        Northcoders
       </a>
