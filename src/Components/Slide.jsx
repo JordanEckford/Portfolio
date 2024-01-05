@@ -41,7 +41,7 @@ export const Slide = ({ children, width = "fit-content", margin = "0 auto" }) =>
      left: 0,
      right: 0,
      background: "#ffbe6e",
-     zIndex: 40,
+     zIndex: 30,
     }}
    ></motion.div>
   </div>

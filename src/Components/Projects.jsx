@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { projectList } from "../../projects";
 import { Reveal } from "./Reveal";
 import { Slide } from "./Slide";
+import { useEffect } from "react";
 
 export const Projects = () => {
+ useEffect(() => {
+  window.scroll(0, 0);
+ }, []);
  return (
   <div className="m-auto w-[80%] sm:w-[60%] mt-28">
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">

@@ -10,7 +10,7 @@ export const About = () => {
 
  return (
   <div className="mt-28">
-   <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
+   <div className="fixed top-[80px] left-0 z-20 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">About Me</h2>
    </div>
    <div className="m-auto mt-10 text-center w-[90%] xl:w-[1200px] flex flex-col">
@@ -37,14 +37,24 @@ export const About = () => {
     <Slide>
      <p className="">
       Prior to embarking on this career shift, I held a BSc in Geology and worked in the field of Engineering Geology for the past six years. Despite my
-      background, I have always harbored a keen interest in coding and software development. However, the opportunity to fully explore and develop my skills in
-      this domain only presented itself recently when I began completing courses on{" "}
+      background, I have always harbored a keen interest in coding and software development.
+     </p>
+    </Slide>
+    <br />
+    <Slide>
+     <p>
+      However, the opportunity to fully explore and develop my skills in this domain only presented itself recently when I began completing courses on{" "}
       <a href="https://www.freecodecamp.org/" className="text-2xl text-slate-600">
        FreeCodeCamp
       </a>{" "}
-      . This newfound passion led me to pursue a career in software development full-time.
+      .
      </p>
     </Slide>
+    <br />
+    <Slide>
+     <p>This newfound passion led me to pursue a career in software development full-time.</p>
+    </Slide>
+
     <br />
     <div className="xl:col-start-2 row-start-3 row-span-1">
      <Slide>
@@ -55,7 +65,7 @@ export const About = () => {
      </Slide>
 
      <Link to="/contact">
-      <button className="animate-slideup4 mt-5 mb-5 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
+      <button className="animate-slideup4 mt-5 mb-20 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
      </Link>
     </div>
    </div>

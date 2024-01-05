@@ -8,7 +8,6 @@ export const Reveal = ({ children, width = "100%", margin = "0 auto" }) => {
  const slideControls = useAnimation();
  useEffect(() => {
   if (isInView) {
-   console.log(isInView);
    mainControls.start("visible");
    slideControls.start("visible");
   }
