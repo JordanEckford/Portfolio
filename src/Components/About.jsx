@@ -20,7 +20,7 @@ export const About = () => {
       src="jordan.jpg"
      />
     </Reveal>
-    <Slide>
+    <Slide popUpDelay={0.45 + 1 * 0.2} slideDelay={0.1 + 1 * 0.2}>
      <p className="m-auto mt-10">
       My name is {"  "}
       <span className="text-2xl">
@@ -34,14 +34,14 @@ export const About = () => {
      </p>
     </Slide>
 
-    <Slide>
+    <Slide popUpDelay={0.45 + 2 * 0.2} slideDelay={0.1 + 2 * 0.2}>
      <p className="">
       Prior to embarking on this career shift, I held a BSc in Geology and worked in the field of Engineering Geology for the past six years. Despite my
       background, I have always harbored a keen interest in coding and software development.
      </p>
     </Slide>
     <br />
-    <Slide>
+    <Slide popUpDelay={0.45 + 3 * 0.2} slideDelay={0.1 + 3 * 0.2}>
      <p>
       However, the opportunity to fully explore and develop my skills in this domain only presented itself recently when I began completing courses on{" "}
       <a href="https://www.freecodecamp.org/" className="text-2xl text-slate-600">
@@ -51,13 +51,13 @@ export const About = () => {
      </p>
     </Slide>
     <br />
-    <Slide>
+    <Slide popUpDelay={0.45 + 4 * 0.2} slideDelay={0.1 + 4 * 0.2}>
      <p>This newfound passion led me to pursue a career in software development full-time.</p>
     </Slide>
 
     <br />
     <div className="xl:col-start-2 row-start-3 row-span-1">
-     <Slide>
+     <Slide popUpDelay={0.45 + 5 * 0.2} slideDelay={0.1 + 5 * 0.2}>
       <p className="">
        I am eager to learn from experienced developers and welcome all feedback, constructive criticism, or positive remarks on my projects. Feel free to reach
        out to me if you have any questions or would like to learn more about my work.

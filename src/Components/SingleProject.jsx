@@ -41,7 +41,7 @@ export const SingleProject = () => {
      <ul className="text-xs mb-5 xl:m-auto">
       {currentProject.text.map((text, index) => {
        return (
-        <Slide>
+        <Slide popUpDelay={0.45 + index * 0.2} slideDelay={0.1 + index * 0.2}>
          <li className="text-[24px] leading-[26px] sm:text-[30px] text-left sm:leading-[32px] mb-2 xl:text-xl xl:text-left xl:ml-5" key={index}>
           {text}
          </li>
@@ -53,9 +53,9 @@ export const SingleProject = () => {
      <div>
       <p className=" text-[25px] leading-[20px] mb-5 underline xl:text-2xl xl:mt-10">Tech Stack Used</p>
       <ul className="text-[20px] leading-[20px] col-span-1 xl:text-xl xl:mt-5">
-       {currentProject.tech.map((tech) => {
+       {currentProject.tech.map((tech, index) => {
         return (
-         <Slide>
+         <Slide popUpDelay={0.45 + currentProject.text.length * 0.2} slideDelay={0.1 + currentProject.text.length * 0.2}>
           <li className="text-[24px] leading-[26px] sm:text-[30px] sm:leading-[32px]" key={tech}>
            {tech}
           </li>

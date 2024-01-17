@@ -22,10 +22,10 @@ export const Projects = () => {
         className={`border-2 border-slate-200 p-0 rounded-lg mb-5 hover:bg-slate-100 hover:border-2 hover:border-black overflow-hidden m-auto shadow-xl xl:m-auto xl:h-[300px] xl:mb-[50px] xl:w-[700px] self-center`}
        >
         <div className=" xl:h-[100%] flex flex-col justify-between xl:grid xl:grid-rows-3 xl:grid-cols-2">
-         <Slide>
+         <Slide popUpDelay={0.9} slideDelay={0.6}>
           <h3 className="text-2xl sm:text-4xl p-2 xl:pt-[20px] text-orange-600 font-bold xl:text-center">{project.name}</h3>
          </Slide>
-         <Slide>
+         <Slide popUpDelay={1.1} slideDelay={0.8}>
           <p className="p-2 xl:text-center">{project.description}</p>
          </Slide>
 

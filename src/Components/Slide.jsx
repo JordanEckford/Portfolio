@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const Slide = ({ children, width = "fit-content", margin = "0 auto" }) => {
+export const Slide = ({ children, width = "fit-content", margin = "0 auto", popUpDelay = 0.45, slideDelay = 0.1 }) => {
  const ref = useRef(null);
  const isInView = useInView(ref, { once: true });
  const mainControls = useAnimation();
@@ -22,7 +22,7 @@ export const Slide = ({ children, width = "fit-content", margin = "0 auto" }) =>
     }}
     initial="hidden"
     animate={mainControls}
-    transition={{ duration: 0.5, delay: 0.45 }}
+    transition={{ duration: 0.5, delay: popUpDelay }}
    >
     {children}
    </motion.div>
@@ -33,7 +33,7 @@ export const Slide = ({ children, width = "fit-content", margin = "0 auto" }) =>
     }}
     initial="hidden"
     animate={slideControls}
-    transition={{ duration: 0.5, ease: "easeIn", delay: 0.1 }}
+    transition={{ duration: 0.5, ease: "easeIn", delay: slideDelay }}
     style={{
      position: "absolute",
      top: 4,

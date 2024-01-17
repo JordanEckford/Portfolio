@@ -1,5 +1,23 @@
 export const projectList = [
  {
+  name: "Sports Scoreboards",
+  description: "Score tracking for Snooker, Pool, and Darts",
+  image: "/scoreboard.png",
+  text: [
+   "A scoreboard app designed to provide easy and engaging ways for user to record scores of popular sports bar games- Snooker, Pool, & Darts",
+   "Users can easily record scores as they are playing and scores will be automatically calculated. Once games are over, scores are recorded and saved, and data is reset automatically ready for the next game",
+   "Rules for each game are taken into account where relevant, so no incorrect score can be inputted. Users will also be notified if mistakes have been made so they can be corrected",
+   "The app enhances user interactivity and engagement through dynamic DOM manipulation with JavaScript.",
+  ],
+  tech: ["HTML", "CSS", "JavaScript"],
+  link: "scoreboard",
+  appLinks: {
+   liveApp: "https://jordaneckfordscoreboardapp.netlify.app/index.html",
+   gitHubFront: "https://github.com/JordanEckford/sports-scoreboards",
+  },
+  additionalScreenshots: ["/scoreboards/1.png", "/scoreboards/2.png", "/scoreboards/3.png", "/scoreboards/4.png", "/scoreboards/5.png", "/scoreboards/6.png"],
+ },
+ {
   name: "Pixel Plunge",
   description: "A deep-sea fishing HTML5 game made with the game framework Phaser",
   image: "/pixel-plunge.png",
