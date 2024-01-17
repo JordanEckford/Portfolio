@@ -4,7 +4,7 @@ export const projectList = [
   description: "Score tracking for Snooker, Pool, and Darts",
   image: "/scoreboard.png",
   text: [
-   "A scoreboard app designed to provide easy and engaging ways for user to record scores of popular sports bar games- Snooker, Pool, & Darts",
+   "A scoreboard app specifically designed for mobiles to provide easy and engaging ways for user to record scores of popular sports bar games- Snooker, Pool, & Darts",
    "Users can easily record scores as they are playing and scores will be automatically calculated. Once games are over, scores are recorded and saved, and data is reset automatically ready for the next game",
    "Rules for each game are taken into account where relevant, so no incorrect score can be inputted. Users will also be notified if mistakes have been made so they can be corrected",
    "The app enhances user interactivity and engagement through dynamic DOM manipulation with JavaScript.",
