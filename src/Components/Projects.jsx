@@ -31,7 +31,7 @@ export const Projects = () => {
 
          <img
           id="test"
-          className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px] h-[300px] w-[350px]"
+          className="xl:col-start-1 xl:col-span-1 xl:row-start-1 xl:row-span-3 xl:h-[300px] h-[300px] w-[350px] justify-center self-center"
           src={project.image}
           alt={`a screenshot of the app called ${project.name} `}
          />

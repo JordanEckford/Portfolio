@@ -55,7 +55,7 @@ export const SingleProject = () => {
       <ul className="text-[20px] leading-[20px] col-span-1 xl:text-xl xl:mt-5">
        {currentProject.tech.map((tech, index) => {
         return (
-         <Slide popUpDelay={0.45 + currentProject.text.length * 0.2} slideDelay={0.1 + currentProject.text.length * 0.2}>
+         <Slide popUpDelay={0.45 + (currentProject.text.length + index + 1) * 0.2} slideDelay={0.1 + (currentProject.text.length + index + 1) * 0.2}>
           <li className="text-[24px] leading-[26px] sm:text-[30px] sm:leading-[32px]" key={tech}>
            {tech}
           </li>
@@ -100,14 +100,14 @@ export const SingleProject = () => {
     <div id="photobanner" className="animate-scroll xl:flex xl:flex-row xl:justify-between gap-x-4 ">
      {currentProject.additionalScreenshots.map((image) => {
       return (
-       <img key={image} src={image} alt={`additional screenshots of the app called ${currentProject.name}`} className="h-[300px] shadow-2xl rounded-s-md" />
+       <img key={image} src={image} alt={`additional screenshots of the app called ${currentProject.name}`} className="h-[400px] shadow-2xl rounded-s-md" />
       );
      })}
      {currentProject.additionalScreenshots.map((image) => {
-      return <img key={image} src={image} alt={`additional screenshots of the app called ${currentProject.name}`} className="h-[300px] shadow-2xl" />;
+      return <img key={image} src={image} alt={`additional screenshots of the app called ${currentProject.name}`} className="h-[400px] shadow-2xl" />;
      })}
      {currentProject.additionalScreenshots.map((image) => {
-      return <img key={image} src={image} alt={`additional screenshots of the app called ${currentProject.name}`} className="h-[300px] shadow-2xl" />;
+      return <img key={image} src={image} alt={`additional screenshots of the app called ${currentProject.name}`} className="h-[400px] shadow-2xl" />;
      })}
     </div>
    </div>

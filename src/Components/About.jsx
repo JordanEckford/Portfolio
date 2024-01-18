@@ -13,7 +13,7 @@ export const About = () => {
    <div className="fixed top-[80px] left-0 z-20 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">About Me</h2>
    </div>
-   <div className="m-auto mt-10 text-center w-[90%] xl:w-[1200px] flex flex-col">
+   <div className="m-auto mt-10 text-left w-[90%] xl:w-[1200px] flex flex-col justify-items-center items-center">
     <Reveal>
      <img
       className="m-auto mt-5 rounded-full w-[330px] h-[250px] xl:w-[500px] xl:h-[370px] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3"
@@ -49,12 +49,8 @@ export const About = () => {
       </a>{" "}
       .
      </p>
-    </Slide>
-    <br />
-    <Slide popUpDelay={0.45 + 4 * 0.2} slideDelay={0.1 + 4 * 0.2}>
      <p>This newfound passion led me to pursue a career in software development full-time.</p>
     </Slide>
-
     <br />
     <div className="xl:col-start-2 row-start-3 row-span-1">
      <Slide popUpDelay={0.45 + 5 * 0.2} slideDelay={0.1 + 5 * 0.2}>
@@ -65,7 +61,9 @@ export const About = () => {
      </Slide>
 
      <Link to="/contact">
-      <button className="animate-slideup4 mt-5 mb-20 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
+      <div className="flex flex-row justify-center items-center">
+       <button className="animate-slideup4 mt-5 mb-20 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
+      </div>
      </Link>
     </div>
    </div>

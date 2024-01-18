@@ -59,20 +59,21 @@ export const Contact = () => {
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
    </div>
-   <p className="m-auto mt-10 w-[90%] text-center text-xl">
-    <Slide>
-     Any questions, suggestions, or just fancy telling me something? <br /> Let me know in the form below!
+   <p className="m-auto mt-10 w-[80%] text-center text-lg xl:w-[60%] sm:text-xl">
+    <Slide popUpDelay={0.45} slideDelay={0.1}>
+     I am actively seeking feedback from experienced developers. I welcome all forms of constructive criticism and insightful feedback on my projects. <br />{" "}
+     Please feel free to reach out if you have any questions or would like to discuss my work in more detail.
     </Slide>
    </p>
    <form
     ref={form}
     onSubmit={sendEmail}
-    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[40%] xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
+    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[60%] xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
    >
     <label className="hidden">unique_id</label>
     <input type="text" name="unique_id" value={uniqueID} readOnly className="hidden" />
     <div className="w-[100%] mb-[20px] flex flex-row justify-between">
-     <Slide width={"45%"} margin="0 auto 0 0">
+     <Slide width={"45%"} margin="0 auto 0 0" popUpDelay={0.65} slideDelay={0.3}>
       <input
        placeholder="Name"
        required
@@ -82,24 +83,23 @@ export const Contact = () => {
        onChange={(event) => {
         setName(event.target.value);
        }}
-       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 "
+       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 sm:text-2xl"
       />
      </Slide>
-     <Slide width={"45%"} margin="0 0 0 auto">
+     <Slide width={"45%"} margin="0 0 0 auto" popUpDelay={0.65} slideDelay={0.3}>
       <input
        placeholder="Email"
-       required
        type="email"
        name="user_email"
        value={email}
        onChange={(event) => {
         setEmail(event.target.value);
        }}
-       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2"
+       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 sm:text-2xl"
       />
      </Slide>
     </div>
-    <Slide width="100%">
+    <Slide width="100%" popUpDelay={0.85} slideDelay={0.5}>
      <textarea
       placeholder="Message"
       required
@@ -108,7 +108,7 @@ export const Contact = () => {
       onChange={(event) => {
        setMessage(event.target.value);
       }}
-      className="border-2 border-orange-600 rounded-md resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4 w-[100%] h-[200px]"
+      className="border-2 border-orange-600 rounded-md p-5 resize-none min-h-[300px] text-center xl:min-h-fit xl:row-start-4 xl:row-span-3 xl:col-span-4 sm:text-2xl w-[100%] h-[200px]"
      />
     </Slide>
     <button
