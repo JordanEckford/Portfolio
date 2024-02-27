@@ -9,6 +9,8 @@ import { Home } from "./Components/Home";
 import { SideBar } from "./Components/Sidebar";
 import { SingleProject } from "./Components/SingleProject";
 import { About } from "./Components/About";
+import { Experience } from "./Components/Experience";
+import { SingleExperience } from "./Components/SingleExperience";
 
 function App() {
  return (
@@ -19,6 +21,8 @@ function App() {
    <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/skills" element={<Skills />} />
+    <Route path="/experience" element={<Experience />} />
+    <Route path="experience/:experience_name" element={<SingleExperience />} />
     <Route path="/projects" element={<Projects />} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />

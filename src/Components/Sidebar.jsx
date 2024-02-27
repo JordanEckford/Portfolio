@@ -55,6 +55,19 @@ export const SideBar = () => {
      </RevealRepeat>
      <RevealRepeat>
       <NavLink
+       to="/experience"
+       onClick={() => setIsOpen(!isOpen)}
+       className={({ isActive }) =>
+        isActive
+         ? "text-2xl text-black m-auto mt-0 mb-0 hover:text-black hover:underline"
+         : "text-2xl text-white m-auto mt-0 mb-0 hover:text-black hover:underline"
+       }
+      >
+       Experience
+      </NavLink>
+     </RevealRepeat>
+     <RevealRepeat>
+      <NavLink
        to="/projects"
        onClick={() => setIsOpen(!isOpen)}
        className={({ isActive }) =>

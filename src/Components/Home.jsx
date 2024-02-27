@@ -13,11 +13,11 @@ export const Home = () => {
     <p className="text-xl sm:text-2xl">Hello, my name is</p>
    </Slide>
    <Reveal width="100%">
-    <h1 className="text-left text-7xl sm:text-8xl text-black mt-5 sm:text-center sm:mr-40 sm:hover:scale-110 duration-1000">Jordan</h1>
+    <h1 className="text-left text-black text-7xl sm:text-8xl text-black mt-5 sm:text-center sm:mr-40 sm:hover:scale-110 duration-1000">Jordan</h1>
     <h1 className="text-right text-7xl sm:text-8xl text-orange-600 mb-5 sm:text-center sm:ml-40 sm:hover:scale-110 duration-1000 font-fancy"> Eckford</h1>
    </Reveal>
    <Slide popUpDelay={0.65} slideDelay={0.3}>
-    <p className="sm:text-2xl">I'm an aspiring Software Developer</p>
+    <p className="sm:text-2xl">I'm a Software Engineer</p>
    </Slide>
    <div className="mt-20 sm:text-2xl"></div>
    <Link to="/projects">
