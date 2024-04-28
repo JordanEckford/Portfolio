@@ -8,7 +8,7 @@ import { Slide } from "./Slide.jsx";
 export const Home = () => {
  const { theme, setTheme } = useContext(ThemeContext);
  return (
-  <div className={`animate-fade m-auto text-center mt-40 w-[100%] sm:w-[50%] ${theme === "light" ? "bg-white" : "bg-slate-500"}`}>
+  <div className={`animate-fade m-auto text-center mt-40 w-[100%] sm:w-[80%] xl:w-[50%] ${theme === "light" ? "bg-white" : "bg-slate-500"}`}>
    <Reveal width="90%">
     <p className="text-xl text-left sm:text-2xl w-[90%] m-auto">Hello, my name is</p>
    </Reveal>
