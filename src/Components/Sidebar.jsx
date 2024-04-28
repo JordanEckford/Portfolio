@@ -12,10 +12,7 @@ export const SideBar = () => {
 
  return (
   <div className="sm:hidden">
-   <button
-    className={`flex flex-col h-10 w-10 ${isOpen ? "bg-orange-400 " : "bg-orange-500 "}rounded justify-center items-center group fixed top-4 right-3 z-50`}
-    onClick={() => setIsOpen(!isOpen)}
-   >
+   <button className={`flex flex-col h-10 w-10 bg-none rounded justify-center items-center group fixed top-4 right-3 z-50`} onClick={() => setIsOpen(!isOpen)}>
     <div className={`${genericHamburgerLine} ${isOpen ? "rotate-45 translate-y-2 opacity-100" : "opacity-100"}`} />
     <div className={`${genericHamburgerLine} ${isOpen ? "opacity-0" : "opacity-100"}`} />
     <div className={`${genericHamburgerLine} ${isOpen ? "-rotate-45 -translate-y-3 opacity-100" : "opacity-100"}`} />

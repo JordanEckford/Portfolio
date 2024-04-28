@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Slide } from "./Slide";
+import { Reveal } from "./Reveal.jsx";
 
 export const Contact = () => {
  const form = useRef();
@@ -60,10 +61,10 @@ export const Contact = () => {
     <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
    </div>
    <p className="m-auto mt-10 w-[80%] text-center text-lg xl:w-[60%] sm:text-xl">
-    <Slide popUpDelay={0.45} slideDelay={0.1}>
+    <Reveal width="100%">
      I am actively seeking feedback from experienced developers. I welcome all forms of constructive criticism and insightful feedback on my projects. <br />{" "}
-     Please feel free to reach out if you have any questions or would like to discuss my work in more detail.
-    </Slide>
+    </Reveal>
+    <Reveal width="100%">Please feel free to reach out if you have any questions or would like to discuss my work in more detail.</Reveal>
    </p>
    <form
     ref={form}

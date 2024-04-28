@@ -17,12 +17,12 @@ export const Reveal = ({ children, width = "100%", margin = "0 auto", delay = 0.
   <div ref={ref} style={{ position: "relative", width, margin, overflow: "hidden" }}>
    <motion.div
     variants={{
-     hidden: { opacity: 0, y: 75 },
-     visible: { opacity: 1, y: 0 },
+     hidden: { opacity: 0, y: 75, scale: 0.95, rotateZ: 2 },
+     visible: { opacity: 1, y: 0, scale: 1, rotateZ: 0 },
     }}
     initial="hidden"
     animate={mainControls}
-    transition={{ duration: 0.5, delay: delay }}
+    transition={{ duration: 0.8, delay: delay }}
    >
     {children}
    </motion.div>
