@@ -22,7 +22,7 @@ function App() {
     <Route path="/" element={<Home />} />
     <Route path="/skills" element={<Skills />} />
     <Route path="/experience" element={<Experience />} />
-    <Route path="experience/:experience_name" element={<SingleExperience />} />
+    <Route path="/experiences/:experience_name" element={<SingleExperience />} />
     <Route path="/projects" element={<Projects />} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />

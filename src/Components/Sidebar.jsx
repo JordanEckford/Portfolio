@@ -11,7 +11,7 @@ export const SideBar = () => {
  const genericHamburgerLine = `h-[4px] w-[30px] my-[3px] rounded-full bg-white transition ease transform duration-300`;
 
  return (
-  <div className="sm:hidden">
+  <div className="lg:hidden">
    <button className={`flex flex-col h-10 w-10 bg-none rounded justify-center items-center group fixed top-4 right-3 z-50`} onClick={() => setIsOpen(!isOpen)}>
     <div className={`${genericHamburgerLine} ${isOpen ? "rotate-45 translate-y-2 opacity-100" : "opacity-100"}`} />
     <div className={`${genericHamburgerLine} ${isOpen ? "opacity-0" : "opacity-100"}`} />
@@ -124,7 +124,7 @@ export const SideBar = () => {
     >
      <h1
       className={` w-[100%] text-center text-1xl sm:text-3xl ease-in-out duration-200  ${colour ? "text-black" : "text-white"} ${
-       swap ? "translate-y-6" : null
+       swap ? "translate-y-10" : null
       }`}
      >
       Eckford

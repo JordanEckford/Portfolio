@@ -58,7 +58,7 @@ export const Contact = () => {
  return (
   <div className="mt-28">
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
-    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">Contact Form</h2>
+    <h2 className="-mt-14 text-white lg:hidden text-center text-3xl lg:mt-10 ">Contact Form</h2>
    </div>
    <p className="m-auto mt-10 w-[80%] text-center text-lg xl:w-[60%] sm:text-xl">
     <Reveal width="100%">

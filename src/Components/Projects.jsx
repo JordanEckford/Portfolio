@@ -9,9 +9,9 @@ export const Projects = () => {
   window.scroll(0, 0);
  }, []);
  return (
-  <div className="m-auto w-[80%] sm:w-[60%] mt-28">
+  <div className="m-auto md:w-[80%] sm:w-[60%] mt-28">
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
-    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl  sm:mt-10">Projects</h2>
+    <h2 className="-mt-14 text-white lg:hidden text-center text-3xl lg:mt-10 ">Projects</h2>
    </div>
    <ul key="projects" className="mt-10 xl:flex xl:flex-row xl:flex-wrap xl:justify-around">
     {projectList.map((project, index) => {

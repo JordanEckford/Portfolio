@@ -27,7 +27,7 @@ export const SingleProject = () => {
      Back
     </Link>
     <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
-     <h3 className="-mt-14 text-white sm:hidden text-center text-2xl xl:text-4xl">{currentProject.name}</h3>
+     <h3 className="-mt-14 text-white lg:hidden text-center text-2xl xl:text-4xl">{currentProject.name}</h3>
     </div>
     <div className="xl:grid mt-10 xl:grid-cols-2 xl:grid-rows-2 xl:mt-20">
      <Reveal>
@@ -67,7 +67,7 @@ export const SingleProject = () => {
      <div className="mt-5 mb-5 border-b-2 border-orange-600 xl:hidden"></div>
      <Reveal>
       <div>
-       <h4 className="text-[25px] leading-[20px] mb-5 underline text-sm xl:text-2xl xl:mt-10">Check it out</h4>
+       <h4 className="text-[25px] leading-[20px] mb-5 underline xl:text-2xl xl:mt-10">Check it out</h4>
        <p className="text-[20px] leading-[20px] hover:text-orange-600 xl:text-xl xl:mt-5">
         <a href={currentProject.appLinks.liveApp} target="_blank">
          <button className="border-2 border-black rounded-md bg-orange-500 text-white font-black duration-1000 shadow-md w-[60%] xl:w-[40%] h-[40px] my-[10px] m-auto text-[20px] hover:bg-white hover:text-black">

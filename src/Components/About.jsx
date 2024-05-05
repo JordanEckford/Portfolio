@@ -11,23 +11,23 @@ export const About = () => {
  return (
   <div className="mt-28">
    <div className="fixed top-[80px] left-0 z-20 h-80px w-[100%]">
-    <h2 className="-mt-14 text-white sm:hidden text-center text-3xl sm:mt-10">About Me</h2>
+    <h2 className="-mt-14 text-white lg:hidden text-center text-3xl lg:mt-10">About Me</h2>
    </div>
    <div className="m-auto mt-10 text-left w-[90%] xl:w-[1200px] flex flex-col justify-items-center items-center">
     <Reveal>
      <img
-      className="m-auto mt-5 rounded-full w-[330px] h-[250px] xl:w-[500px] xl:h-[370px] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3"
+      className="m-auto mt-5 rounded-md w-[300px] xl:w-[500px] xl:h-[370px] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3"
       src="jordan.jpg"
      />
     </Reveal>
     <Slide popUpDelay={0.45 + 1 * 0.2} slideDelay={0.1 + 1 * 0.2}>
      <p className="m-auto mt-10">
       My name is {"  "}
-      <span className="text-2xl">
+      <span className="">
        Jordan <span className="text-orange-600">Eckford</span>
       </span>{" "}
       . I'm a recent graduate of the Software Development bootcamp at{" "}
-      <a href="https://northcoders.com/" className="text-2xl text-red-600 hover:text-slate-400">
+      <a href="https://northcoders.com/" className=" text-red-600 hover:text-slate-400">
        Northcoders
       </a>
       , having completed the program in November 2023.
@@ -44,7 +44,7 @@ export const About = () => {
     <Slide popUpDelay={0.45 + 3 * 0.2} slideDelay={0.1 + 3 * 0.2}>
      <p>
       However, the opportunity to fully explore and develop my skills in this domain only presented itself recently when I began completing courses on{" "}
-      <a href="https://www.freecodecamp.org/" className="text-2xl text-slate-600">
+      <a href="https://www.freecodecamp.org/" className="text-slate-600">
        FreeCodeCamp
       </a>{" "}
       .
@@ -62,7 +62,9 @@ export const About = () => {
 
      <Link to="/contact">
       <div className="flex flex-row justify-center items-center">
-       <button className="animate-slideup4 mt-5 mb-20 bg-orange-200 border-2 border-black p-2 rounded-md hover:bg-white duration-1000">Contact Me</button>
+       <button className="border-[0px] border-white bg-gradient-to-r from-orange-600 to-orange-400 p-5 rounded-[999px] hover:border-black hover:text-black hover:duration-1000 animate-slideup4 text-white font-bold w-[80vw] m-auto mt-6 mb-6 sm:w-[40%]">
+        Contact Me
+       </button>
       </div>
      </Link>
     </div>
