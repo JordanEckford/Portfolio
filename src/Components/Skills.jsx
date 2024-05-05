@@ -7,7 +7,7 @@ export const Skills = () => {
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
     <h2 className="-mt-14 text-white lg:hidden text-center text-3xl lg:mt-10">Skills</h2>
    </div>
-   <div className="m-auto mt-10 grid grid-cols-2 lg:grid-cols-4 lg:w-[700px] justify-items-stretch gap-y-4 gap-x-3 w-80 xl:w-[1000px] xl:justify-items-center">
+   <div className="m-auto mt-10 grid grid-cols-2 md:grid-cols-4 lg:w-[700px] justify-items-stretch gap-y-1 gap-x-3 xl:w-[1000px] xl:justify-items-center">
     {skillsList.map((skill, index) => {
      return (
       <Slide>
