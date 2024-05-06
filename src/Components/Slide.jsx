@@ -40,7 +40,7 @@ export const Slide = ({ children, width = "fit-content", margin = "0 auto", popU
      bottom: 4,
      left: 0,
      right: 0,
-     background: "#ffbe6e",
+     background: "linear-gradient(to right, rgb(249 115 22), rgb(253 186 116))",
      zIndex: 30,
     }}
    ></motion.div>

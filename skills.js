@@ -7,7 +7,7 @@ export const skillsList = [
  {
   name: "HTML5",
   img: "/skillsimages/html.png",
-  link: "https://react.com",
+  link: "https://html.com",
  },
  {
   name: "JavaScript",

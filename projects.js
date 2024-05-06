@@ -62,7 +62,7 @@ export const projectList = [
   additionalScreenshots: ["/ncnews/1.png", "/ncnews/2.png", "/ncnews/3.png"],
  },
  {
-  name: "League of Legends Info App",
+  name: "League of Legends App",
   description: "An app made to display information fetched from the Riot Games API using React and CSS.",
   image: "/leagueoflegendsapp.png",
   text: [

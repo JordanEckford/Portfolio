@@ -14,7 +14,7 @@ import { SingleExperience } from "./Components/SingleExperience";
 
 function App() {
  return (
-  <div className="mx-auto bg-white p-0 m-0">
+  <div className="mx-auto bg-white p-0 m-0 mb-12">
    <SideBar />
    <Header />
    <Navbar />

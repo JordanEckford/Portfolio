@@ -9,7 +9,7 @@ export const Experience = () => {
   window.scroll(0, 0);
  }, []);
  return (
-  <div className="m-auto w-[90%] mt-28">
+  <div className="m-auto w-[90%] lg:w-[60%] xl:w-[60%] mt-28">
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
     <h2 className="-mt-14 text-white lg:hidden text-center text-3xl lg:mt-10 ">Experience</h2>
    </div>
@@ -19,11 +19,11 @@ export const Experience = () => {
       <Reveal>
        <li
         key={experience.link + index}
-        className={`border-2 border-slate-200 p-0 rounded-lg mb-5 hover:bg-slate-100 hover:border-2 hover:border-black overflow-hidden m-auto shadow-xl xl:m-auto xl:h-[300px] xl:mb-[50px] xl:w-[700px] self-center`}
+        className={`border-2 border-slate-200 bg-slate-50 p-0 rounded-lg mb-5 hover:bg-slate-100 hover:border-2 hover:border-black overflow-hidden m-auto shadow-md xl:m-auto xl:h-[300px] xl:mb-[50px] xl:w-[700px] self-center`}
        >
         <div className=" xl:h-[100%] flex flex-col justify-between xl:grid xl:grid-rows-3 xl:grid-cols-2">
          <Slide popUpDelay={0.9} slideDelay={0.6}>
-          <h3 className="text-3xl sm:text-4xl p-2 xl:pt-[20px] text-orange-600 font-bold xl:text-center">{experience.name}</h3>
+          <h3 className="text-4xl p-2 xl:pt-[20px] text-orange-600 font-bold xl:text-center">{experience.name}</h3>
          </Slide>
          <Slide popUpDelay={1.1} slideDelay={0.8}>
           <p className="p-2 pb-0 text-xl text-center xl:text-center text-gray-700 italic">{experience.title}</p>
@@ -43,7 +43,7 @@ export const Experience = () => {
            </button>
           </Link> */}
           <a className="m-auto w-[40%]" href={experience.links.website} target="_blank">
-           <button className="border-2 border-black rounded-md bg-orange-500 text-white hover:bg-orange-200 hover:text-black duration-1000 shadow-md w-[100%] h-[40px] my-[10px] m-auto text-[15px]">
+           <button className="border-2 border-black rounded-md bg-gradient-to-r from-orange-600 to-orange-400 text-white hover:bg-orange-200 hover:text-black duration-1000 shadow-md w-[100%] h-[40px] my-[10px] m-auto text-[15px]">
             Website
            </button>
           </a>

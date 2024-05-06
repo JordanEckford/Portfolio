@@ -1,7 +1,11 @@
 import { Slide } from "./Slide";
 import { skillsList } from "../../skills";
+import { useEffect } from "react";
 
 export const Skills = () => {
+ useEffect(() => {
+  window.scroll(0, 0);
+ }, []);
  return (
   <div className="m-auto w-[90%] mt-28">
    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">

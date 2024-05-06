@@ -64,43 +64,46 @@ export const Contact = () => {
     <Reveal width="100%">
      I am actively seeking feedback from experienced developers. I welcome all forms of constructive criticism and insightful feedback on my projects. <br />{" "}
     </Reveal>
+    <br />
     <Reveal width="100%">Please feel free to reach out if you have any questions or would like to discuss my work in more detail.</Reveal>
+    <br />
+    <Reveal width="100%">Leave me your email if you would like a response</Reveal>
    </p>
    <form
     ref={form}
     onSubmit={sendEmail}
-    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[60%] xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[400px] sm:mt-5"
+    className="animate-fade m-auto mt-10 w-[80%] lg:w-[80%] flex flex-col xl:w-[60%] xl:text-center xl:gap-y-0 xl:gap-x-2 xl:h-[800px] sm:mt-5"
    >
     <label className="hidden">unique_id</label>
     <input type="text" name="unique_id" value={uniqueID} readOnly className="hidden" />
-    <div className="w-[100%] mb-[20px] flex flex-row justify-between">
-     <Slide width={"45%"} margin="0 auto 0 0" popUpDelay={0.65} slideDelay={0.3}>
-      <input
-       placeholder="Name"
-       required
-       type="text"
-       name="user_name"
-       value={name}
-       onChange={(event) => {
-        setName(event.target.value);
-       }}
-       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 sm:text-2xl"
-      />
-     </Slide>
-     <Slide width={"45%"} margin="0 0 0 auto" popUpDelay={0.65} slideDelay={0.3}>
-      <input
-       placeholder="Email"
-       type="email"
-       name="user_email"
-       value={email}
-       onChange={(event) => {
-        setEmail(event.target.value);
-       }}
-       className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 sm:text-2xl"
-      />
-     </Slide>
-    </div>
-    <Slide width="100%" popUpDelay={0.85} slideDelay={0.5}>
+    {/* <div className="w-[100%] mb-[20px] flex flex-row justify-between"> */}
+    <Slide width={"100%"} margin="0 auto 20px 0" popUpDelay={0.65} slideDelay={0.3}>
+     <input
+      placeholder="Name"
+      required
+      type="text"
+      name="user_name"
+      value={name}
+      onChange={(event) => {
+       setName(event.target.value);
+      }}
+      className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 sm:text-2xl"
+     />
+    </Slide>
+    <Slide width={"100%"} margin="0 0 20px auto" popUpDelay={0.85} slideDelay={0.5}>
+     <input
+      placeholder="Email"
+      type="email"
+      name="user_email"
+      value={email}
+      onChange={(event) => {
+       setEmail(event.target.value);
+      }}
+      className="border-2 border-orange-600 w-[100%] h-[50px] rounded-md text-center row-start-2 xl:col-span-2 sm:text-2xl"
+     />
+    </Slide>
+    {/* </div> */}
+    <Slide width="100%" popUpDelay={1.05} slideDelay={0.7}>
      <textarea
       placeholder="Message"
       required
@@ -113,8 +116,8 @@ export const Contact = () => {
      />
     </Slide>
     <button
-     className={`animate-slideup1 m-auto mt-5 bg-orange-600 w-[40%] p-2 rounded-md text-white xl:row-start-7 xl:col-span-4 hover:bg-slate-500 ${
-      sendLoading ? "bg-slate-600" : null
+     className={`border-[0px] border-white bg-gradient-to-r from-orange-600 to-orange-400 px-5 py-2 rounded-[999px] hover:border-black hover:text-black hover:duration-1000 animate-slideup2 text-white font-bold w-[80vw] m-auto mt-5 sm:w-[40%] ${
+      sendLoading ? "from-slate-500 to-slate-500" : null
      }`}
      type="submit"
      disabled={sendLoading ? true : false}

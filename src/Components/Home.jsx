@@ -26,7 +26,7 @@ export const Home = () => {
     </button>
    </Link>
 
-   <div className="m-auto mt-20 mb-5 border-b-2 w-[80%] border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
+   <div className="m-auto mt-20 mb-5 w-[80%] h-[3px] rounded-xl bg-gradient-to-r from-orange-600 to-orange-400 xl:w-[60%] xl:max-w-{1000px]"></div>
    <div className="flex flex-row w-80 m-auto">
     <a className="w-40" href="https://www.linkedin.com/in/jordan-eckford-3a6b18103/" target="_blank">
      <img
@@ -45,7 +45,7 @@ export const Home = () => {
      />
     </a>
    </div>
-   <div className="m-auto mt-5 mb-5 w-[80%] border-b-2 border-orange-600 xl:w-[60%] xl:max-w-{1000px]"></div>
+   <div className="m-auto mt-5 mb-5 w-[80%] h-[3px] rounded-xl bg-gradient-to-r from-orange-600 to-orange-400 xl:w-[60%] xl:max-w-{1000px]"></div>
   </div>
  );
 };

@@ -26,7 +26,7 @@ export const SingleProject = () => {
     >
      Back
     </Link>
-    <div className="fixed top-[80px] left-0 z-0 h-80px w-[100%]">
+    <div className="fixed top-[80px] left-0 z-30 h-80px w-[100%]">
      <h3 className="-mt-14 text-white lg:hidden text-center text-2xl xl:text-4xl">{currentProject.name}</h3>
     </div>
     <div className="xl:grid mt-10 xl:grid-cols-2 xl:grid-rows-2 xl:mt-20">
