@@ -15,7 +15,7 @@ export const About = () => {
    </div>
    <div className="m-auto mt-10 text-left w-[90%] xl:w-[1200px] flex flex-col justify-items-center items-center">
     <Reveal>
-     <img className="m-auto mt-5 rounded-md h-96 shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3" src="jordan.jpg" />
+     <img className="m-auto mt-5 rounded-md h-[410px] w-[307px] shadow-xl border-2 border-black xl:grid-cols-1 xl:row-span-3" src="jordan.jpg" />
     </Reveal>
     <Slide popUpDelay={0.45 + 1 * 0.2} slideDelay={0.1 + 1 * 0.2}>
      <p className="m-auto mt-10">
