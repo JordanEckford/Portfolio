@@ -1,9 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { Slide } from "./Slide";
 import { Reveal } from "./Reveal.jsx";
 
 export const Contact = () => {
+ useEffect(() => {
+  window.scroll(0, 0);
+ }, []);
+
  const form = useRef();
  const [name, setName] = useState("");
  const [email, setEmail] = useState("");
