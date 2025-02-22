@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../Contexts/ThemeContext.jsx";
 
 export const Navbar = () => {
+ const { theme, setTheme } = useContext(ThemeContext);
  return (
   <div className="bg-gradient-to-r from-orange-600 to-orange-400 top-0 left-0 fixed h-[70px] w-[100%] shadow-lg z-20">
    <img src="/jordanicon.png" alt="" className="w-[60px] h-[60px] fixed top-[5px] left-[5px]" />
@@ -66,6 +69,13 @@ export const Navbar = () => {
      Contact
     </NavLink>
    </nav>
+   {/* <button
+    onClick={() => {
+     theme === "dark" ? setTheme("light") : setTheme("dark");
+    }}
+   >
+    Test
+   </button> */}
   </div>
  );
 };

@@ -11,10 +11,13 @@ import { SingleProject } from "./Components/SingleProject";
 import { About } from "./Components/About";
 import { Experience } from "./Components/Experience";
 import { SingleExperience } from "./Components/SingleExperience";
+import { useContext } from "react";
+import { ThemeContext } from "./Contexts/ThemeContext.jsx";
 
 function App() {
+ const { theme, setTheme } = useContext(ThemeContext);
  return (
-  <div className="mx-auto bg-white p-0 m-0 mb-12">
+  <div className={`mx-auto ${theme === "light" ? "bg-white" : "bg-blue-950"} p-0 m-0 mb-12`}>
    <SideBar />
    <Header />
    <Navbar />
